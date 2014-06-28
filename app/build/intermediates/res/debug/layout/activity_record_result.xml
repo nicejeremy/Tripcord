@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jeremy.tripcord.record.RecordResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_trip_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_radius"
+                android:paddingBottom="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/textView_trip_result_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="From : Manhatten, NY, USA"
+                    android:textColor="@color/color_tripcord"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView_trip_result_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_trip_result_from"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="To : Manhatten, NY, USA"
+                    android:textColor="@color/color_tripcord"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView_trip_result_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_trip_result_to"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="1024 picture(s) was(were) taken"
+                    android:textColor="@color/color_tripcord"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/textView_total_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView_trip_result_picture"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Total Distance\n0"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_tripcord"/>
+
+                <TextView
+                    android:id="@+id/textView_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView_trip_result_picture"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Total Time\n1h 20m"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_tripcord"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_trip_result"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_border_radius"
+                android:paddingBottom="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="20dp">
+
+                <EditText
+                    android:id="@+id/edittext_trip_result_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_border_radius"
+                    android:hint="@string/enter_trip_title"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/textView_trip_result_feel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edittext_trip_result_title"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/ask_feeling"
+                    android:textColor="@color/color_tripcord"/>
+
+                <TextView
+                    android:id="@+id/textView_trip_result_transportation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_trip_result_feel_title"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ask_transportation"
+                    android:textColor="@color/color_tripcord"/>
+
+                <TextView
+                    android:id="@+id/textView_trip_result_weather_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_trip_result_transportation_title"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ask_weather"
+                    android:textColor="@color/color_tripcord"/>
+
+                <EditText
+                    android:id="@+id/edittext_trip_result_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/textView_trip_result_weather_title"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_border_radius"
+                    android:hint="@string/enter_trip_description"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+<!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/activity_record_result.xml -->
