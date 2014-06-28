@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values-fa/values.xml -->
+    <eat-comment />
+
+    <plurals name="abbrev_in_num_days">
+        <item msgid="2178576254385739855" quantity="one">"فردا"</item>
+        <item msgid="2973062968038355991" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> روز"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item msgid="3274708118124045246" quantity="one">"در ۱ ساعت"</item>
+        <item msgid="3705373766798013406" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> ساعت"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item msgid="562786149928284878" quantity="one">"در ۱ دقیقه"</item>
+        <item msgid="4216113292706568726" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> دقیقه"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item msgid="5842225370795066299" quantity="one">"در ۱ ثانیه"</item>
+        <item msgid="5495880108825805108" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> ثانیه"</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item msgid="8463161711492680309" quantity="one">"ديروز"</item>
+        <item msgid="3453342639616481191" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> روز قبل"</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item msgid="4796212039724722116" quantity="one">"۱ ساعت قبل"</item>
+        <item msgid="6889970745748538901" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ساعت قبل"</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item msgid="6361490147113871545" quantity="one">"۱ دقیقه قبل"</item>
+        <item msgid="851164968597150710" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> دقیقه قبل"</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item msgid="1849036840200069118" quantity="one">"۱ ثانیه قبل"</item>
+        <item msgid="3699169366650930415" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ثانیه قبل"</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item msgid="8917467491248809972" quantity="one">"۱ ساعت"</item>
+        <item msgid="3863962854246773930" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ساعت"</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item msgid="4915414002546085617" quantity="one">"۱ دقیقه"</item>
+        <item msgid="3165187169224908775" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> دقیقه"</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item msgid="6962015528372969481" quantity="one">"۱ ثانیه"</item>
+        <item msgid="1886107766577166786" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ثانیه"</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item msgid="5413088743009839518" quantity="one">"فردا"</item>
+        <item msgid="5109449375100953247" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> روز"</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item msgid="7164353342477769999" quantity="one">"در ۱ ساعت"</item>
+        <item msgid="547290677353727389" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> ساعت"</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item msgid="8793095251325200395" quantity="one">"در ۱ دقیقه"</item>
+        <item msgid="3330713936399448749" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> دقیقه"</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item msgid="2729745560954905102" quantity="one">"در ۱ ثانیه"</item>
+        <item msgid="1241926116443974687" quantity="other">"در <ns1:g id="COUNT">%d</ns1:g> ثانیه"</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item msgid="861358534398115820" quantity="one">"ديروز"</item>
+        <item msgid="2479586466153314633" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> روز قبل"</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item msgid="9150797944610821849" quantity="one">"۱ ساعت قبل"</item>
+        <item msgid="2467273239587587569" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ساعت قبل"</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item msgid="3306787433088810191" quantity="one">"۱ دقیقه قبل"</item>
+        <item msgid="2176942008915455116" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> دقیقه قبل"</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item msgid="4869870056547896011" quantity="one">"۱ ثانیه قبل"</item>
+        <item msgid="3903706804349556379" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> ثانیه قبل"</item>
+    </plurals>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fa/values.xml -->
+    <eat-comment />
+
+    <string name="abc_action_bar_home_description" msgid="4600421777120114993">"پیمایش به صفحه اصلی"</string>
+    <string name="abc_action_bar_up_description" msgid="1594238315039666878">"پیمایش به بالا"</string>
+    <string name="abc_action_menu_overflow_description" msgid="3588849162933574182">"گزینه‌های بیشتر"</string>
+    <string name="abc_action_mode_done" msgid="4076576682505996667">"انجام شد"</string>
+    <string name="abc_activity_chooser_view_see_all" msgid="7468859129482906941">"مشاهده همه"</string>
+    <string name="abc_activitychooserview_choose_application" msgid="2031811694353399454">"انتخاب برنامه"</string>
+    <string name="abc_searchview_description_clear" msgid="3691816814315814921">"پاک کردن عبارت جستجو"</string>
+    <string name="abc_searchview_description_query" msgid="2550479030709304392">"عبارت جستجو"</string>
+    <string name="abc_searchview_description_search" msgid="8264924765203268293">"جستجو"</string>
+    <string name="abc_searchview_description_submit" msgid="8928215447528550784">"ارسال عبارت جستجو"</string>
+    <string name="abc_searchview_description_voice" msgid="893419373245838918">"جستجوی شفاهی"</string>
+    <string name="abc_shareactionprovider_share_with" msgid="3421042268587513524">"اشتراک‌گذاری با"</string>
+    <string name="abc_shareactionprovider_share_with_application" msgid="7165123711973476752">"اشتراک‌گذاری با %s"</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values-fa/auth_strings.xml -->
+    <eat-comment />
+
+    <string name="auth_client_needs_enabling_title" msgid="3983201110833868073">"‏برنامه‌ای به فعال کردن خدمات Google Play نیاز دارد."</string>
+    <string name="auth_client_needs_installation_title" msgid="7999585836145154206">"‏برنامه‌ای به نصب خدمات Google Play نیاز دارد."</string>
+    <string name="auth_client_needs_update_title" msgid="6488605506794595966">"‏برنامه‌ای به به‌روزرسانی خدمات Google Play نیاز دارد."</string>
+    <string name="auth_client_play_services_err_notification_msg" msgid="3635065018897986478">"‏خطا در خدمات Google Play"</string>
+    <string name="auth_client_requested_by_msg" msgid="6304135633531965756">"درخواست توسط <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string name="auth_client_using_bad_version_title" msgid="2534454398764507874">"‏برنامه‌ای تلاش کرد از نسخه نادرستی از خدمات Google Play استفاده کند."</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values-fa/common_strings.xml -->
+    <eat-comment />
+
+    <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"‏فعال کردن خدمات Google Play"</string>
+    <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"‏تا زمانی‌که خدمات Google Play را فعال نکنید این برنامه کار نمی‌کند."</string>
+    <string name="common_google_play_services_enable_title" msgid="529078775174559253">"‏فعال کردن خدمات Google Play"</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg" msgid="2443362625939284971">"درخواست توسط <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string name="common_google_play_services_install_button" msgid="8515591849428043265">"‏دریافت خدمات Google Play"</string>
+    <string name="common_google_play_services_install_text_phone" msgid="8685301130651051380">"‏این برنامه بدون خدمات Google Play اجرا نمی‌شود، این خدمات در تلفن شما وجود ندارد."</string>
+    <string name="common_google_play_services_install_text_tablet" msgid="1589957570365247855">"‏این برنامه بدون خدمات Google Play اجرا نمی‌شود، این خدمات در رایانهٔ لوحی شما وجود ندارد."</string>
+    <string name="common_google_play_services_install_title" msgid="26645092511305524">"‏دریافت خدمات Google Play"</string>
+    <string name="common_google_play_services_invalid_account_text" msgid="4983316348021735578">"حسابی که تعیین کردید در این دستگاه وجود ندارد. لطفاً حساب دیگری را انتخاب کنید."</string>
+    <string name="common_google_play_services_invalid_account_title" msgid="1066672360770936753">"حساب نامعتبر"</string>
+    <string name="common_google_play_services_needs_enabling_title" msgid="2583358409598976717">"‏برنامه‌ای نیاز به فعال شدن خدمات Google Play دارد."</string>
+    <string name="common_google_play_services_network_error_text" msgid="9038847255613537209">"‏برای اتصال به خدمات Google Play اتصال داده لازم است."</string>
+    <string name="common_google_play_services_network_error_title" msgid="3827284619958211114">"خطای شبکه"</string>
+    <string name="common_google_play_services_notification_needs_installation_title" msgid="8120534356798772974">"‏برنامه‌ای نیاز به نصب خدمات Google Play دارد."</string>
+    <string name="common_google_play_services_notification_needs_update_title" msgid="1388129345631079938">"‏‫برنامه‌ای نیاز به یک به‌روزرسانی برای خدمات Google Play دارد."</string>
+    <string name="common_google_play_services_notification_ticker" msgid="1852570676146674985">"‏خطا در خدمات Google Play"</string>
+    <string name="common_google_play_services_unknown_issue" msgid="4762332809710093730">"‏مشکل نامشخص در خدمات Google Play."</string>
+    <string name="common_google_play_services_unsupported_date_text" msgid="4725396522367789365">"تاریخ روی دستگاه ظاهراً اشتباه است. لطفاً تاریخ روی دستگاه را بررسی کنید."</string>
+    <string name="common_google_play_services_unsupported_text" msgid="3542578567569488671">"‏خدمات Google Play، که برخی از برنامه‌های شما به آن وابسته است، توسط دستگاه شما پشتیبانی نمی‌شود. لطفاً برای دریافت کمک با سازنده تماس بگیرید."</string>
+    <string name="common_google_play_services_unsupported_title" msgid="6334768798839376943">"‏خدمات Google Play"</string>
+    <string name="common_google_play_services_update_button" msgid="8932944190611227642">"به‌روزرسانی"</string>
+    <string name="common_google_play_services_update_text" msgid="448354684997260580">"‏تا زمانی‌که خدمات Google Play را به‌روز نکنید این برنامه کار نمی‌کند."</string>
+    <string name="common_google_play_services_update_title" msgid="6006316683626838685">"‏به‌روزرسانی خدمات Google Play"</string>
+    <string name="common_signin_button_text" msgid="9071884888741449141">"ورود به سیستم"</string>
+    <string name="common_signin_button_text_long" msgid="2429381841831957106">"‏ورود به سیستم با Google‎"</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values-fa/values.xml -->
+    <eat-comment />
+
+    <string name="date_time">%2$s،‏ %1$s</string>
+    <string name="preposition_for_date" msgid="9093949757757445117">"در <ns1:g id="DATE">%s</ns1:g>"</string>
+    <string name="preposition_for_time" msgid="5506831244263083793">"در <ns1:g id="TIME">%s</ns1:g>"</string>
+    <string name="relative_time" msgid="1818557177829411417">"<ns1:g id="DATE">%1$s</ns1:g>، <ns1:g id="TIME">%2$s</ns1:g>"</string>
+
+</resources>

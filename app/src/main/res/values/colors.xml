@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_tripcord">#8E6540</color>
+    <!--<color name="color_tripcord">#3399FF</color>"-->
+
+    <color name="color_start">#0067CB</color>
+    <color name="color_pause">#FF5800</color>
+    <color name="color_stop">#FF2800</color>
+
+</resources>

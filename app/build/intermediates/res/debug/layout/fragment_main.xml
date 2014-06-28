@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jeremy.tripcord.main.MainActivity$PlaceholderFragment">
+
+    <ListView
+        android:id="@+id/listView_trip_infos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"/>
+
+    <Button
+        android:id="@+id/button_new_trip"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/plus"/>
+
+</RelativeLayout>
+<!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/fragment_main.xml -->

@@ -1,0 +1,23 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_count_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView_count_down"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:alpha="0.5"
+        android:background="#000000"
+        android:enabled="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="70dp" />
+
+</RelativeLayout>
+<!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/view_count_down.xml -->

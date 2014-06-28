@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-a581d128526b87d9e5f79a011a207f493baab649.jar"
+        jar="/development/adt-bundle-mac-x86_64-20130717/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-929f4aaa8ce07b4dfe9465c1909d14d5aec3a66a.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="204e63a153ba147b98f3d9631aa3b1cd1c9759e6"/>
+    <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-64b94e6eafa776f6a83c92f23f410fda287df234.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-26201e6ecfa958ed1fbd65c9d48d1fba362d8a96.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3dfdf1db5ce5ea2999a5dcde8c8e650b02660059"/>
+
+</pre-dex-items>

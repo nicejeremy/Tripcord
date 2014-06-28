@@ -1,0 +1,13 @@
+<!-- From: file:/Users/dlew/code/gitrepos/joda-time-android/library/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="net.danlew.android.joda">
+
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
+
+    <application>
+        <receiver android:name="net.danlew.android.joda.TimeZoneChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values-ka-rGE/values.xml -->
+    <eat-comment />
+
+    <plurals name="abbrev_in_num_days">
+        <item msgid="2178576254385739855" quantity="one">"ხვალ"</item>
+        <item msgid="2973062968038355991" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> დღეში"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_hours">
+        <item msgid="3274708118124045246" quantity="one">"1 საათში"</item>
+        <item msgid="3705373766798013406" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> საათში"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item msgid="562786149928284878" quantity="one">"1 წუთში"</item>
+        <item msgid="4216113292706568726" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წუთში"</item>
+    </plurals>
+    <plurals name="abbrev_in_num_seconds">
+        <item msgid="5842225370795066299" quantity="one">"1 წამში"</item>
+        <item msgid="5495880108825805108" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წამის წინ"</item>
+    </plurals>
+    <plurals name="abbrev_num_days_ago">
+        <item msgid="8463161711492680309" quantity="one">"გუშინ"</item>
+        <item msgid="3453342639616481191" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> დღის წინ"</item>
+    </plurals>
+    <plurals name="abbrev_num_hours_ago">
+        <item msgid="4796212039724722116" quantity="one">"1 საათის წინ"</item>
+        <item msgid="6889970745748538901" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> საათის წინ"</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item msgid="6361490147113871545" quantity="one">"1 წუთის წინ"</item>
+        <item msgid="851164968597150710" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წუთის წინ"</item>
+    </plurals>
+    <plurals name="abbrev_num_seconds_ago">
+        <item msgid="1849036840200069118" quantity="one">"1 წმ. წინ"</item>
+        <item msgid="3699169366650930415" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წამის წინ"</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item msgid="8917467491248809972" quantity="one">"1 საათი"</item>
+        <item msgid="3863962854246773930" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> საათში"</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item msgid="4915414002546085617" quantity="one">"1 წუთი"</item>
+        <item msgid="3165187169224908775" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წუთი"</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item msgid="6962015528372969481" quantity="one">"1 წამი"</item>
+        <item msgid="1886107766577166786" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წამი"</item>
+    </plurals>
+    <plurals name="in_num_days">
+        <item msgid="5413088743009839518" quantity="one">"ხვალ"</item>
+        <item msgid="5109449375100953247" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> დღეში"</item>
+    </plurals>
+    <plurals name="in_num_hours">
+        <item msgid="7164353342477769999" quantity="one">"1 საათში"</item>
+        <item msgid="547290677353727389" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> საათში"</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item msgid="8793095251325200395" quantity="one">"1 წუთში"</item>
+        <item msgid="3330713936399448749" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წუთში"</item>
+    </plurals>
+    <plurals name="in_num_seconds">
+        <item msgid="2729745560954905102" quantity="one">"1 წამში"</item>
+        <item msgid="1241926116443974687" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წამში"</item>
+    </plurals>
+    <plurals name="num_days_ago">
+        <item msgid="861358534398115820" quantity="one">"გუშინ"</item>
+        <item msgid="2479586466153314633" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> დღის წინ"</item>
+    </plurals>
+    <plurals name="num_hours_ago">
+        <item msgid="9150797944610821849" quantity="one">"1 საათის წინ"</item>
+        <item msgid="2467273239587587569" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> საათის წინ"</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item msgid="3306787433088810191" quantity="one">"1 წუთის უკან"</item>
+        <item msgid="2176942008915455116" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წუთის წინ"</item>
+    </plurals>
+    <plurals name="num_seconds_ago">
+        <item msgid="4869870056547896011" quantity="one">"1 წამის წინ"</item>
+        <item msgid="3903706804349556379" quantity="other">"<ns1:g id="COUNT">%d</ns1:g> წამის წინ"</item>
+    </plurals>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ka-rGE/values.xml -->
+    <eat-comment />
+
+    <string name="abc_action_bar_home_description" msgid="4600421777120114993">"მთავარზე ნავიგაცია"</string>
+    <string name="abc_action_bar_up_description" msgid="1594238315039666878">"ზემოთ ნავიგაცია"</string>
+    <string name="abc_action_menu_overflow_description" msgid="3588849162933574182">"მეტი ვარიანტები"</string>
+    <string name="abc_action_mode_done" msgid="4076576682505996667">"დასრულდა"</string>
+    <string name="abc_activity_chooser_view_see_all" msgid="7468859129482906941">"ყველას ნახვა"</string>
+    <string name="abc_activitychooserview_choose_application" msgid="2031811694353399454">"აპის არჩევა"</string>
+    <string name="abc_searchview_description_clear" msgid="3691816814315814921">"მოთხოვნის გასუფთავება"</string>
+    <string name="abc_searchview_description_query" msgid="2550479030709304392">"ძიების მოთხოვნა"</string>
+    <string name="abc_searchview_description_search" msgid="8264924765203268293">"ძიება"</string>
+    <string name="abc_searchview_description_submit" msgid="8928215447528550784">"მოთხოვნის გადაგზავნა"</string>
+    <string name="abc_searchview_description_voice" msgid="893419373245838918">"ხმოვანი ძიება"</string>
+    <string name="abc_shareactionprovider_share_with" msgid="3421042268587513524">"გაზიარება:"</string>
+    <string name="abc_shareactionprovider_share_with_application" msgid="7165123711973476752">"%s-თან გაზიარება"</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values-ka-rGE/auth_strings.xml -->
+    <eat-comment />
+
+    <string name="auth_client_needs_enabling_title" msgid="3983201110833868073">"აპლიკაცია საჭიროებს გააქტიურებულ Google Play Services."</string>
+    <string name="auth_client_needs_installation_title" msgid="7999585836145154206">"აპლიკაცია საჭიროებს Google Play Services-ის ინსტალაციას."</string>
+    <string name="auth_client_needs_update_title" msgid="6488605506794595966">"აპლიკაცია საჭიროებს Google Play Services-ის განახლებას."</string>
+    <string name="auth_client_play_services_err_notification_msg" msgid="3635065018897986478">"Google Play სერვისების შეცდომა"</string>
+    <string name="auth_client_requested_by_msg" msgid="6304135633531965756">"მომთხოვნი: <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string name="auth_client_using_bad_version_title" msgid="2534454398764507874">"აპლიკაცია შეეცადა გამოეყენებინა Google Play სერვისების არასწორი ვერსია."</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values-ka-rGE/common_strings.xml -->
+    <eat-comment />
+
+    <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"Google Play სერვისების გააქტიურება"</string>
+    <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"ეს აპი არ იმუშავებს, თუ არ გაააქტიურებთ Google Play სერვისებს."</string>
+    <string name="common_google_play_services_enable_title" msgid="529078775174559253">"Google Play სერვისების გააქტიურება"</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg" msgid="2443362625939284971">"მომთხოვნი: <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string name="common_google_play_services_install_button" msgid="8515591849428043265">"Google Play სერვისების მიღება"</string>
+    <string name="common_google_play_services_install_text_phone" msgid="8685301130651051380">"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."</string>
+    <string name="common_google_play_services_install_text_tablet" msgid="1589957570365247855">"ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება."</string>
+    <string name="common_google_play_services_install_title" msgid="26645092511305524">"Google Play სერვისების მიღება"</string>
+    <string name="common_google_play_services_invalid_account_text" msgid="4983316348021735578">"მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში."</string>
+    <string name="common_google_play_services_invalid_account_title" msgid="1066672360770936753">"ანგარიში არასწორია"</string>
+    <string name="common_google_play_services_needs_enabling_title" msgid="2583358409598976717">"აპლიკაცია საჭიროებს გააქტიურებულ Google Play Services."</string>
+    <string name="common_google_play_services_network_error_text" msgid="9038847255613537209">"Google Play Services-თან დასაკავშირებლად მონაცემთა გადაცემა აუცილებელია."</string>
+    <string name="common_google_play_services_network_error_title" msgid="3827284619958211114">"ქსელის შეცდომა"</string>
+    <string name="common_google_play_services_notification_needs_installation_title" msgid="8120534356798772974">"აპლიკაცია საჭიროება Google Play Services-ის ინსტალაციას."</string>
+    <string name="common_google_play_services_notification_needs_update_title" msgid="1388129345631079938">"აპლიკაცია საჭიროებს Google Play Services-ის განახლებას."</string>
+    <string name="common_google_play_services_notification_ticker" msgid="1852570676146674985">"Google Play Services-ის შეცდომა"</string>
+    <string name="common_google_play_services_unknown_issue" msgid="4762332809710093730">"Google Play სერვისებთან დაკავშირებით უცნობი შეფერხება წარმოიშვა."</string>
+    <string name="common_google_play_services_unsupported_date_text" msgid="4725396522367789365">"როგორც ჩანს, მოწყობილობის თარიღი არასწორია. გთხოვთ, შეამოწმოთ მოწყობილობის თარიღი."</string>
+    <string name="common_google_play_services_unsupported_text" msgid="3542578567569488671">"Google Play სერვისები, რაც თქვენს ზოგიერთ აპს ჭირდება, თქვენს მოწყობილობაზე მხარდაჭერილი არ არის. გთხოვთ, დაუკავშირდეთ მწარმოებელს დახმარებისათვის."</string>
+    <string name="common_google_play_services_unsupported_title" msgid="6334768798839376943">"Google Play სერვისები"</string>
+    <string name="common_google_play_services_update_button" msgid="8932944190611227642">"განახლება"</string>
+    <string name="common_google_play_services_update_text" msgid="448354684997260580">"ეს აპი ვერ გაეშვება, თუ Google Play სერვისებს არ განაახლებთ."</string>
+    <string name="common_google_play_services_update_title" msgid="6006316683626838685">"Google Play სერვისების განახლება"</string>
+    <string name="common_signin_button_text" msgid="9071884888741449141">"შესვლა"</string>
+    <string name="common_signin_button_text_long" msgid="2429381841831957106">"Google-ით შესვლა"</string>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values-ka-rGE/values.xml -->
+    <eat-comment />
+
+    <string name="preposition_for_date" msgid="9093949757757445117">"თარიღი: <ns1:g id="DATE">%s</ns1:g>"</string>
+    <string name="preposition_for_time" msgid="5506831244263083793">"<ns1:g id="TIME">%s</ns1:g>-ზე"</string>
+    <string name="relative_time" msgid="1818557177829411417">"<ns1:g id="DATE">%1$s</ns1:g>, <ns1:g id="TIME">%2$s</ns1:g>"</string>
+
+</resources>
