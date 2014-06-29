@@ -38,5 +38,9 @@
     <string name="ask_transportation">What did you take?</string>
     <string name="ask_weather">How was the weather?</string>
     <string name="enter_trip_description">Describe your journey</string>
+    <string name="action_drop">Drop</string>
+    <string name="action_done">Done</string>
+    <string name="trip_detail_info_save_success">Your journey info have been saved</string>
+    <string name="trip_detail_info_save_fail">Your journey didn\'t save successfully</string>
 
 </resources>

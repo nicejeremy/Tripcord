@@ -220,4 +220,72 @@ public class DatabaseManager {
 
         return photoInfos;
     }
+
+    public TripInfo selectTripInfo(int tripSeq) {
+
+        TripInfo tripInfo = null;
+
+        String query = "SELECT * FROM " + DatabaseHelper.TABLE_NAME_TRIP_INFOS +
+                " WHERE " + DatabaseHelper.COLUMN_TRIP_INFOS_TRIP_SEQ + " = " + tripSeq +
+                " ORDER BY " + DatabaseHelper.COLUMN_TRIP_INFOS_TRIP_SEQ + " DESC";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+
+        int indexTripSeq = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_TRIP_SEQ);
+        int indexTitle = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_TITLE);
+        int indexDescription = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_DESCRIPTION);
+        int indexFeel = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_FEEL);
+        int indexTransportation = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_TRANSPORTATION);
+        int indexWeather = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_WEATHER);
+        int indexDistance = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_DISTANCE);
+        int indexDuringTime = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_DURING_TIME);
+        int indexFrom = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_FROM);
+        int indexTo = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_TO);
+        int indexOngoing = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_ONGOING);
+        int indexSnapshot = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_SNAPSHOT);
+        int indexCreated = cursor.getColumnIndex(DatabaseHelper.COLUMN_TRIP_INFOS_CREATED);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+                tripInfo = new TripInfo();
+
+                tripInfo.setTripSeq(cursor.getInt(indexTripSeq));
+                tripInfo.setTitle(cursor.getString(indexTitle));
+                tripInfo.setDescription(cursor.getString(indexDescription));
+                tripInfo.setFeel(cursor.getString(indexFeel));
+                tripInfo.setTransportation(cursor.getString(indexTransportation));
+                tripInfo.setWeather(cursor.getString(indexWeather));
+                tripInfo.setDistance(cursor.getInt(indexDistance));
+                tripInfo.setDuringTime(cursor.getInt(indexDuringTime));
+                tripInfo.setFrom(cursor.getString(indexFrom));
+                tripInfo.setTo(cursor.getString(indexTo));
+                tripInfo.setOngoing(cursor.getInt(indexOngoing) > 0);
+                tripInfo.setSnapshot(cursor.getBlob(indexSnapshot));
+                tripInfo.setCreated(new Date(cursor.getLong(indexCreated)));
+            } while (cursor.moveToNext());
+
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+
+
+        return tripInfo;
+    }
+
+    public int updateTripDetailInfo(int tripSeq, String title, String description, String feel, String transportation, String weather) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DatabaseHelper.COLUMN_TRIP_INFOS_TITLE, title);
+        contentValues.put(DatabaseHelper.COLUMN_TRIP_INFOS_DESCRIPTION, description);
+        contentValues.put(DatabaseHelper.COLUMN_TRIP_INFOS_FEEL, feel);
+        contentValues.put(DatabaseHelper.COLUMN_TRIP_INFOS_TRANSPORTATION, transportation);
+        contentValues.put(DatabaseHelper.COLUMN_TRIP_INFOS_WEATHER, weather);
+        String where = DatabaseHelper.COLUMN_TRIP_INFOS_TRIP_SEQ + " = " + tripSeq;
+
+        int result = sqLiteDatabase.update(DatabaseHelper.TABLE_NAME_TRIP_INFOS, contentValues, where, null);
+
+        return result;
+    }
 }

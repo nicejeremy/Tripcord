@@ -44,10 +44,10 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.manager.DistanceManager;
-import com.jeremy.tripcord.common.database.DatabaseManager;
 import com.jeremy.tripcord.common.manager.PhotoManager;
 import com.jeremy.tripcord.common.manager.TimeManager;
 import com.jeremy.tripcord.common.utils.ImageUtil;
+import com.jeremy.tripcord.record.model.RecordModel;
 import com.jeremy.tripcord.record.thread.GetAddressTask;
 import com.jeremy.tripcord.record.thread.TimerThread;
 import com.jeremy.tripcord.record.view.CountDownObserver;
@@ -81,7 +81,6 @@ public class RecordActivity extends ActionBarActivity
     private boolean isRecording = false;
     private int duringTime = 0;
 
-    private DatabaseManager databaseManager;
     private DistanceManager distanceManager;
 
     private LocationClient locationClient;
@@ -120,9 +119,7 @@ public class RecordActivity extends ActionBarActivity
         locations = new ArrayList<LatLng>();
         addresses = new ArrayList<String>();
 
-        databaseManager = new DatabaseManager(this);
-        databaseManager.open();
-        tripSeq = databaseManager.insertTripInfo();
+        tripSeq = RecordModel.createTripInfo(getApplicationContext());
         distanceManager = DistanceManager.getInstance();
         distanceManager.setTripSeq(tripSeq);
 
@@ -235,7 +232,7 @@ public class RecordActivity extends ActionBarActivity
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                int result = databaseManager.deleteCurrentTripInfo(tripSeq);
+                int result = RecordModel.deleteCurrentTripInfo(getApplicationContext(), tripSeq);
                 finish();
             }
         });
@@ -266,7 +263,7 @@ public class RecordActivity extends ActionBarActivity
             public void onSnapshotReady(Bitmap bitmap) {
 
                 byte[] snapshot = ImageUtil.bitmapToByteArray(bitmap);
-                int result = databaseManager.updateTripSnapShot(tripSeq, snapshot);
+                int result = RecordModel.updateTripSnapShot(getApplicationContext(), tripSeq, snapshot);
 
                 Log.d("Tripcord", "Snapshot create success [" + result + "]");
             }
@@ -314,7 +311,7 @@ public class RecordActivity extends ActionBarActivity
         if (isRecording) {
 
             drawLine(latLng);
-            int seq = databaseManager.insertLocation(tripSeq, latLng);
+            int seq = RecordModel.insertLocation(getApplicationContext(), tripSeq, latLng);
             Log.d("Tripcord", "RecordActivity >> location info insert success [" + seq + "]");
             distanceManager.addLocation(location);
             updateDistance();
@@ -342,7 +339,7 @@ public class RecordActivity extends ActionBarActivity
 
     private void updateDistance() {
 
-        TextView textViewTotalDistance = (TextView) findViewById(R.id.textView_total_distance);
+        TextView textViewTotalDistance = (TextView) findViewById(R.id.textView_trip_result_distance);
         textViewTotalDistance.setText("Total Distance\n" + String.format("%.0f", distanceManager.getTotalDistance()) + " m");
 
         Log.d("Tripcord", "RecordActivity >> current distance [" + distanceManager.getTotalDistance() + "]");
@@ -435,8 +432,12 @@ public class RecordActivity extends ActionBarActivity
                     //distance, during_time, from, to, ongoing
                     updateTripInfoAsFinish();
                     takeSnapShot();
-
                     dialog.dismiss();
+
+                    Intent intent = new Intent(RecordActivity.this, RecordResultActivity.class);
+                    intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripSeq);
+                    startActivity(intent);
+
                     finish();
                 }
             });
@@ -462,7 +463,7 @@ public class RecordActivity extends ActionBarActivity
             destination = addresses.get(addresses.size() - 1);
         }
 
-        int result = databaseManager.updateTripInfoAsFinish(tripSeq, distance, duringTime, departure, destination);
+        int result = RecordModel.updateTripInfoAsFinish(getApplicationContext(), tripSeq, distance, duringTime, departure, destination);
 
         Log.d("Tripcord", "RecordActivity >> Finish travel recording [Result : " + result + ", Distance : " + distance + ", During Time : " + duringTime + ", Departure : " + departure + ", Destination : " + destination + "]");
     }
@@ -496,7 +497,7 @@ public class RecordActivity extends ActionBarActivity
 
                 case WHAT_TIME :
 
-                    TextView textViewTotalDistance = (TextView) findViewById(R.id.textView_total_time);
+                    TextView textViewTotalDistance = (TextView) findViewById(R.id.textView_trip_result_time);
                     duringTime = (Integer) msg.obj;
 
 //                    int minute = timeTaken % TIME_SECOND_IN_A_MINUTE;

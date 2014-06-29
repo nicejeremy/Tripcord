@@ -7,4 +7,6 @@ public class CommonContants {
 
     public static final String ROOT_PATH_TRIPCORD = "/tripcord";
 
+    public static final String EXTRA_KEY_TRIPSEQ = "tripSeq";
+
 }

@@ -56,6 +56,7 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
 
         Bitmap bitmap = ImageUtil.byteArrayToBitmap(tripInfo.getSnapshot());
         viewHolder.imageViewBackGroundMap.setImageBitmap(bitmap);
+        viewHolder.textViewTitle.setText(tripInfo.getTitle());
         viewHolder.textViewFrom.setText(tripInfo.getFrom());
         viewHolder.textViewDate.setText(tripInfo.getCreated().toString());
         viewHolder.textViewPhoto.setText(tripInfo.getPhotoInfoList().size() + " photo(s)");
@@ -63,11 +64,11 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
         if (tripInfo.getPhotoInfoList() != null && tripInfo.getPhotoInfoList().size() != 0) {
             viewHolder.linearLayoutPhotos.setVisibility(View.VISIBLE);
             for (int i = 0 ; i < tripInfo.getPhotoInfoList().size(); i++) {
-                if (!imageLoadedRowPositions.contains(position)) {
+                if (!imageLoadedRowPositions.contains(tripInfo.getTripSeq())) {
                     addPhotoView(viewHolder.linearLayoutPhotos, tripInfo.getPhotoInfoList().get(i).getPath());
                 }
             }
-            imageLoadedRowPositions.add(position);
+            imageLoadedRowPositions.add(tripInfo.getTripSeq());
         } else {
             viewHolder.linearLayoutPhotos.setVisibility(View.INVISIBLE);
         }
