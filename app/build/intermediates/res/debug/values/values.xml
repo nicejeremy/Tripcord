@@ -804,6 +804,8 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="action_done">Done</string>
+    <string name="action_drop">Drop</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Tripcord</string>
@@ -890,6 +892,8 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="title_settings">Settings</string>
+    <string name="trip_detail_info_save_fail">Your journey didn\'t save successfully</string>
+    <string name="trip_detail_info_save_success">Your journey info have been saved</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values/wallet_strings.xml -->
     <eat-comment />
 

@@ -31,22 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1057fec-6347-46dd-a5ff-aee46484d092" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/done.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/trash.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jeremy/tripcord/app/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jeremy/tripcord/app/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/net/danlew/android/joda/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/net/danlew/android/joda/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/view/TripInfoListAdaptor.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/view/TripInfoListAdaptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/record_result.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/record_result.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tripcord.iws" />
@@ -152,8 +139,8 @@
       <file leaf-file-name="TripInfoListAdaptor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/view/TripInfoListAdaptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4311926" vertical-offset="0" max-vertical-offset="1425">
-              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.82568806" vertical-offset="0" max-vertical-offset="1425">
+              <caret line="47" column="81" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -2282,6 +2269,11 @@
       <created>1397136806765</created>
       <updated>1397136806765</updated>
     </task>
+    <task id="LOCAL-00001" summary="#2&#10;여행 결과 페이지 개발 중&#10;화면 UI 개발, Title / Description 입력 로직 구성">
+      <created>1404029810456</created>
+      <updated>1404029810456</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2333,6 +2325,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="#2&#10;여행 결과 페이지 개발 중&#10;화면 UI 개발, Title / Description 입력 로직 구성" />
+    <option name="LAST_COMMIT_MESSAGE" value="#2&#10;여행 결과 페이지 개발 중&#10;화면 UI 개발, Title / Description 입력 로직 구성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2723,8 +2717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/view/TripInfoListAdaptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4311926" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.82568806" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="47" column="81" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
           <folding />
         </state>
       </provider>

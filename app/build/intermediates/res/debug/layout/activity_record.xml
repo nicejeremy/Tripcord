@@ -55,7 +55,7 @@
             android:textColor="@color/color_tripcord"/>
 
         <TextView
-            android:id="@+id/textView_total_distance"
+            android:id="@+id/textView_trip_result_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -68,7 +68,7 @@
             android:textColor="@color/color_tripcord"/>
 
         <TextView
-            android:id="@+id/textView_total_time"
+            android:id="@+id/textView_trip_result_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -84,7 +84,7 @@
             android:id="@+id/textView_title_picture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView_total_distance"
+            android:layout_below="@id/textView_trip_result_distance"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:text="Pictures"
