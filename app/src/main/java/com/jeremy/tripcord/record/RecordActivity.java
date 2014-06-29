@@ -303,7 +303,7 @@ public class RecordActivity extends ActionBarActivity
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         polylineOptions = new PolylineOptions();
-        polylineOptions.color(Color.BLUE);
+        polylineOptions.color(getResources().getColor(R.color.color_tripcord));
 
         TimerThread timerThread = new TimerThread(handlerTime);
         Log.d("Tripcord", "RecordActivity >> triavel info generate success [" + tripSeq + "]");

@@ -23,6 +23,7 @@ public class TripInfo {
     private Date created;
 
     private List<PhotoInfo> photoInfoList;
+    private List<LocationInfo> locationInfoList;
 
     public int getTripSeq() {
         return tripSeq;
@@ -134,5 +135,13 @@ public class TripInfo {
 
     public void setPhotoInfoList(List<PhotoInfo> photoInfoList) {
         this.photoInfoList = photoInfoList;
+    }
+
+    public List<LocationInfo> getLocationInfoList() {
+        return locationInfoList;
+    }
+
+    public void setLocationInfoList(List<LocationInfo> locationInfoList) {
+        this.locationInfoList = locationInfoList;
     }
 }

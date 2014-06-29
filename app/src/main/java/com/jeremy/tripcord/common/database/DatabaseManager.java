@@ -8,6 +8,7 @@ import android.location.Location;
 import android.provider.ContactsContract;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.jeremy.tripcord.common.database.domain.LocationInfo;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 
@@ -287,5 +288,44 @@ public class DatabaseManager {
         int result = sqLiteDatabase.update(DatabaseHelper.TABLE_NAME_TRIP_INFOS, contentValues, where, null);
 
         return result;
+    }
+
+    public List<LocationInfo> selectTripLocations(int tripSeq) {
+
+        List<LocationInfo> locationInfos = new ArrayList<LocationInfo>();
+
+        String query = "SELECT * FROM " + DatabaseHelper.TABLE_NAME_LOCATIONS +
+                " WHERE " + DatabaseHelper.COLUMN_LOCATIONS_TRIP_SEQ + " = " + tripSeq;
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+
+        int indexLocationSeq = cursor.getColumnIndex(DatabaseHelper.COLUMN_LOCATIONS_LOCATION_SEQ);
+        int indexTripSeq = cursor.getColumnIndex(DatabaseHelper.COLUMN_LOCATIONS_TRIP_SEQ);
+        int indexLatitude = cursor.getColumnIndex(DatabaseHelper.COLUMN_LOCATIONS_LATITUDE);
+        int indexLongitude= cursor.getColumnIndex(DatabaseHelper.COLUMN_LOCATIONS_LONGITUDE);
+        int indexCreated = cursor.getColumnIndex(DatabaseHelper.COLUMN_LOCATIONS_CREATED);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+
+                LocationInfo locationInfo = new LocationInfo();
+
+                locationInfo.setLocationSeq(cursor.getInt(indexLocationSeq));
+                locationInfo.setTripSeq(cursor.getInt(indexTripSeq));
+                locationInfo.setLatitude(cursor.getDouble(indexLatitude));
+                locationInfo.setLongitude(cursor.getDouble(indexLongitude));
+                locationInfo.setCreated(new Date(cursor.getLong(indexCreated)));
+
+                locationInfos.add(locationInfo);
+
+            } while (cursor.moveToNext());
+
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        return locationInfos;
     }
 }

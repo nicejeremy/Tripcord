@@ -68,6 +68,7 @@ public class RecordModel {
 
         TripInfo tripInfo = databaseManager.selectTripInfo(tripSeq);
         tripInfo.setPhotoInfoList(databaseManager.selectTripPhotos(tripSeq));
+        tripInfo.setLocationInfoList(databaseManager.selectTripLocations(tripSeq));
 
         return tripInfo;
     }
