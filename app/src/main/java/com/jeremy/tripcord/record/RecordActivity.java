@@ -94,6 +94,9 @@ public class RecordActivity extends ActionBarActivity
 
     private File imageDestination;
 
+    /*
+     * Activity Life Cycle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,81 +105,6 @@ public class RecordActivity extends ActionBarActivity
         startCountDown(5);
         initModules();
         initViews();
-    }
-
-    private void startCountDown(int i) {
-
-        CountDownView countDownView = (CountDownView) findViewById(R.id.view_count_down);
-        try {
-            countDownView.start(i, countDownObserver);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void initModules() {
-
-        locations = new ArrayList<LatLng>();
-        addresses = new ArrayList<String>();
-
-        tripSeq = RecordModel.createTripInfo(getApplicationContext());
-        distanceManager = DistanceManager.getInstance();
-        distanceManager.setTripSeq(tripSeq);
-
-        locationClient = new LocationClient(RecordActivity.this, RecordActivity.this, RecordActivity.this);
-        locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(UPDATE_INTERVAL);
-        locationRequest.setFastestInterval(FASTEST_INTERVAL);
-
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        polylineOptions = new PolylineOptions();
-        polylineOptions.color(Color.BLUE);
-
-        TimerThread timerThread = new TimerThread(handlerTime);
-        Log.d("Tripcord", "RecordActivity >> triavel info generate success [" + tripSeq + "]");
-        timerThread.start();
-    }
-
-    private void initViews() {
-
-        googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-        googleMap.setMyLocationEnabled(true);
-        googleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
-
-            @Override
-            public void onCameraChange(CameraPosition cameraPosition) {
-                Log.d("Tripcord", "GoogleMap >> camera is changed");
-            }
-        });
-
-        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-
-                Log.d("Tripcord", "Map Clicked");
-            }
-        });
-
-        googleMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
-            @Override
-            public boolean onMyLocationButtonClick() {
-
-                Log.d("Tripcord", "My location button Clicked");
-
-                return false;
-            }
-        });
-
-        Button buttonRecordPause = (Button) findViewById(R.id.button_record_pause);
-        buttonRecordPause.setOnClickListener(onClickListenerRecordPause);
-
-        Button buttonRecordStop = (Button) findViewById(R.id.button_record_stop);
-        buttonRecordStop.setOnClickListener(onClickListenerRecordStop);
-
-        Button buttonTakeAPicture = (Button) findViewById(R.id.button_take_picture);
-        buttonTakeAPicture.setOnClickListener(onClickListenerTakeAPicture);
     }
 
     @Override
@@ -246,7 +174,9 @@ public class RecordActivity extends ActionBarActivity
         alertDialog.show();
     }
 
-    // GooglePlayServiceClient
+    /*
+     * Google Map / Location
+     */
     @Override
     public void onConnected(Bundle bundle) {
 
@@ -335,6 +265,84 @@ public class RecordActivity extends ActionBarActivity
                     break;
             }
         }
+    }
+
+    /*
+     * Custom Methods
+     */
+    private void startCountDown(int i) {
+
+        CountDownView countDownView = (CountDownView) findViewById(R.id.view_count_down);
+        try {
+            countDownView.start(i, countDownObserver);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initModules() {
+
+        locations = new ArrayList<LatLng>();
+        addresses = new ArrayList<String>();
+
+        tripSeq = RecordModel.createTripInfo(getApplicationContext());
+        distanceManager = DistanceManager.getInstance();
+        distanceManager.setTripSeq(tripSeq);
+
+        locationClient = new LocationClient(RecordActivity.this, RecordActivity.this, RecordActivity.this);
+        locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(UPDATE_INTERVAL);
+        locationRequest.setFastestInterval(FASTEST_INTERVAL);
+
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        polylineOptions = new PolylineOptions();
+        polylineOptions.color(Color.BLUE);
+
+        TimerThread timerThread = new TimerThread(handlerTime);
+        Log.d("Tripcord", "RecordActivity >> triavel info generate success [" + tripSeq + "]");
+        timerThread.start();
+    }
+
+    private void initViews() {
+
+        googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+        googleMap.setMyLocationEnabled(true);
+        googleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+
+            @Override
+            public void onCameraChange(CameraPosition cameraPosition) {
+                Log.d("Tripcord", "GoogleMap >> camera is changed");
+            }
+        });
+
+        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+
+                Log.d("Tripcord", "Map Clicked");
+            }
+        });
+
+        googleMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
+            @Override
+            public boolean onMyLocationButtonClick() {
+
+                Log.d("Tripcord", "My location button Clicked");
+
+                return false;
+            }
+        });
+
+        Button buttonRecordPause = (Button) findViewById(R.id.button_record_pause);
+        buttonRecordPause.setOnClickListener(onClickListenerRecordPause);
+
+        Button buttonRecordStop = (Button) findViewById(R.id.button_record_stop);
+        buttonRecordStop.setOnClickListener(onClickListenerRecordStop);
+
+        Button buttonTakeAPicture = (Button) findViewById(R.id.button_take_picture);
+        buttonTakeAPicture.setOnClickListener(onClickListenerTakeAPicture);
     }
 
     private void updateDistance() {

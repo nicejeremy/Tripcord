@@ -26,11 +26,13 @@ import java.util.List;
  */
 public class TripInfoFragment extends Fragment {
 
-//    DatabaseManager databaseManager;
     List<TripInfo> tripInfoList;
 
     ListView listViewTripInfos;
 
+    /*
+     * Fragment Setting / Life Cycle
+     */
     public static TripInfoFragment newInstance() {
 
         TripInfoFragment fragment = new TripInfoFragment();
@@ -56,6 +58,22 @@ public class TripInfoFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        loadTripInfoList();
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+
+        super.onAttach(activity);
+    }
+
+    /*
+     * Custom Methods
+     */
     private void initViews(View rootView) {
 
         listViewTripInfos = (ListView) rootView.findViewById(R.id.listView_trip_infos);
@@ -76,9 +94,6 @@ public class TripInfoFragment extends Fragment {
     private void initModules() {
 
         tripInfoList = new ArrayList<TripInfo>();
-
-//        databaseManager = new DatabaseManager(getActivity());
-//        databaseManager.open();
     }
 
     private void loadTripInfoList() {
@@ -89,19 +104,6 @@ public class TripInfoFragment extends Fragment {
         tripInfoListAdaptor.clear();
         tripInfoListAdaptor.addAll(tripInfoList);
         tripInfoListAdaptor.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        loadTripInfoList();
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-
-        super.onAttach(activity);
     }
 
 }
