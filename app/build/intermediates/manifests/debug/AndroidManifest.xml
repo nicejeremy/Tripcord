@@ -67,6 +67,10 @@
             android:name="com.jeremy.tripcord.record.RecordResultActivity"
             android:label="@string/title_activity_record_result" >
         </activity>
+        <activity
+            android:name="com.jeremy.tripcord.record.RecordDetailActivity"
+            android:label="@string/title_activity_record_detail" >
+        </activity>
 
         <receiver android:name="net.danlew.android.joda.TimeZoneChangedReceiver" >
             <intent-filter>

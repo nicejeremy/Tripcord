@@ -1,6 +1,8 @@
 package com.jeremy.tripcord.main.view;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jeremy.tripcord.app.R;
+import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 
@@ -24,12 +27,11 @@ import java.util.List;
  */
 public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
 
-    private List<Integer> imageLoadedRowPositions;
+    private Handler handler;
 
-    public TripInfoListAdaptor(Context context, int resource, List<TripInfo> objects) {
+    public TripInfoListAdaptor(Context context, int resource, List<TripInfo> objects, Handler handler) {
         super(context, resource, objects);
-
-        imageLoadedRowPositions = new ArrayList<Integer>();
+        this.handler = handler;
     }
 
     @Override
@@ -52,7 +54,7 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        TripInfo tripInfo = getItem(position);
+        final TripInfo tripInfo = getItem(position);
 
         Bitmap bitmap = ImageUtil.byteArrayToBitmap(tripInfo.getSnapshot());
         viewHolder.imageViewBackGroundMap.setImageBitmap(bitmap);
@@ -63,15 +65,23 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
 
         if (tripInfo.getPhotoInfoList() != null && tripInfo.getPhotoInfoList().size() != 0) {
             viewHolder.linearLayoutPhotos.setVisibility(View.VISIBLE);
-            for (int i = 0 ; i < tripInfo.getPhotoInfoList().size(); i++) {
-                if (!imageLoadedRowPositions.contains(tripInfo.getTripSeq())) {
-                    addPhotoView(viewHolder.linearLayoutPhotos, tripInfo.getPhotoInfoList().get(i).getPath());
-                }
+            viewHolder.linearLayoutPhotos.removeAllViews();
+            for (int i = 0; i < tripInfo.getPhotoInfoList().size(); i++) {
+                addPhotoView(viewHolder.linearLayoutPhotos, tripInfo.getPhotoInfoList().get(i).getPath());
             }
-            imageLoadedRowPositions.add(tripInfo.getTripSeq());
         } else {
             viewHolder.linearLayoutPhotos.setVisibility(View.INVISIBLE);
         }
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message message = new Message();
+                message.what = CommonContants.WHAT_TRIP_LIST_CLICKED;
+                message.obj = tripInfo;
+                handler.sendMessage(message);
+            }
+        });
 
         return convertView;
     }

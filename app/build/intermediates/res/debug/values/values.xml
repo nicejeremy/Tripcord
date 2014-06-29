@@ -884,8 +884,9 @@
     <string name="title_about_us">About Us</string>
     <string name="title_activity_intro">IntroActivity</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_record">RecordActivity</string>
-    <string name="title_activity_record_result">RecordResultActivity</string>
+    <string name="title_activity_record">Recording your journey</string>
+    <string name="title_activity_record_detail">Journey</string>
+    <string name="title_activity_record_result">Result your journey</string>
     <string name="title_history">History</string>
     <string name="title_notice">Notice</string>
     <string name="title_section1">Section 1</string>

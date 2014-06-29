@@ -1,15 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.jeremy.tripcord.record.RecordResultActivity" >
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
 
     <item android:id="@+id/action_drop"
         android:icon="@drawable/trash"
-        android:showAsAction="ifRoom"
+        yourapp:showAsAction="ifRoom"
         android:title="@string/action_drop" />
 
     <item android:id="@+id/action_done"
         android:icon="@drawable/done"
-        android:showAsAction="ifRoom"
+        yourapp:showAsAction="ifRoom"
         android:title="@string/action_done" />
 
 </menu>

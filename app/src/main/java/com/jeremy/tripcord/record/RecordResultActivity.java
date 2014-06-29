@@ -2,6 +2,8 @@ package com.jeremy.tripcord.record;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -13,12 +15,15 @@ import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.record.model.RecordModel;
 
-public class RecordResultActivity extends Activity {
+public class RecordResultActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_result);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(false);
 
         TripInfo tripInfo = loadTripInfo();
         initViews(tripInfo);

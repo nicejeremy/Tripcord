@@ -9,4 +9,6 @@ public class CommonContants {
 
     public static final String EXTRA_KEY_TRIPSEQ = "tripSeq";
 
+    public static final int WHAT_TRIP_LIST_CLICKED = 0;
+
 }

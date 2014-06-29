@@ -17,7 +17,7 @@
     <string name="login">Login</string>
     <string name="facebook">Facebook</string>
     <string name="signup">Sign up</string>
-    <string name="title_activity_record">RecordActivity</string>
+    <string name="title_activity_record">Recording your journey</string>
     <string name="stop">Stop</string>
     <string name="pause">Pause</string>
     <string name="start">Start</string>
@@ -32,7 +32,7 @@
     <string name="title_notice">Notice</string>
     <string name="title_settings">Settings</string>
     <string name="title_about_us">About Us</string>
-    <string name="title_activity_record_result">RecordResultActivity</string>
+    <string name="title_activity_record_result">Result your journey</string>
     <string name="enter_trip_title">Insert this trip title</string>
     <string name="ask_feeling">How was your feeling?</string>
     <string name="ask_transportation">What did you take?</string>
@@ -42,5 +42,6 @@
     <string name="action_done">Done</string>
     <string name="trip_detail_info_save_success">Your journey info have been saved</string>
     <string name="trip_detail_info_save_fail">Your journey didn\'t save successfully</string>
+    <string name="title_activity_record_detail">Journey</string>
 
 </resources>
