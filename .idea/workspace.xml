@@ -31,12 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1057fec-6347-46dd-a5ff-aee46484d092" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/LocationInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jeremy/tripcord/app/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jeremy/tripcord/app/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/TripInfo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/TripInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tripcord.iws" />
@@ -120,37 +117,13 @@
       <file leaf-file-name="RecordActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.807693" vertical-offset="4159" max-vertical-offset="7620">
-              <caret line="305" column="77" selection-start-line="305" selection-start-column="30" selection-end-line="305" selection-end-column="77" />
+            <state vertical-scroll-proportion="-3.3076923" vertical-offset="5479" max-vertical-offset="7620">
+              <caret line="386" column="0" selection-start-line="386" selection-start-column="0" selection-end-line="403" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4098#4128#0" expanded="true" />
                 <element signature="e#10974#11202#0" expanded="true" />
                 <element signature="e#11191#11192#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonContants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TripInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/TripInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1500">
-              <caret line="139" column="53" selection-start-line="139" selection-start-column="53" selection-end-line="139" selection-end-column="53" />
-              <folding>
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2628#2629#0" expanded="true" />
-                <element signature="e#2839#2840#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,55 +153,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/LocationInfo.java">
+      <file leaf-file-name="RecordDetailActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7522936" vertical-offset="1690" max-vertical-offset="2655">
+              <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
               <folding>
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseHelper.java">
+      <file leaf-file-name="activity_record_result.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state vertical-scroll-proportion="-15.37037" vertical-offset="710" max-vertical-offset="2460">
+              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecordDetailActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
+      <file leaf-file-name="activity_record.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6146789" vertical-offset="1120" max-vertical-offset="2145">
-              <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-5.851852" vertical-offset="1267" max-vertical-offset="2085">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="111" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_navigation_drawer.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_record_detail.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="525">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1380,12 +1364,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/record_result.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/TripInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/domain/LocationInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/database/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" />
       </list>
     </option>
@@ -2318,7 +2302,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="961" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2340,7 +2324,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32678983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2576,17 +2560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2594,17 +2567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_trip_info_list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6666666" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -2654,28 +2616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.37037" vertical-offset="710" max-vertical-offset="2460">
-          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="2085">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/view/TripInfoListAdaptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1530">
@@ -2684,17 +2624,6 @@
             <element signature="e#3182#3503#0" expanded="true" />
             <element signature="e#3492#3493#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="270">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2801,10 +2730,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.851852" vertical-offset="1267" max-vertical-offset="2085">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="111" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.37037" vertical-offset="710" max-vertical-offset="2460">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.807693" vertical-offset="4159" max-vertical-offset="7620">
-          <caret line="305" column="77" selection-start-line="305" selection-start-column="30" selection-end-line="305" selection-end-column="77" />
+        <state vertical-scroll-proportion="-3.3076923" vertical-offset="5479" max-vertical-offset="7620">
+          <caret line="386" column="0" selection-start-line="386" selection-start-column="0" selection-end-line="403" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4098#4128#0" expanded="true" />
@@ -2814,10 +2776,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_trip_info_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6081081" vertical-offset="555" max-vertical-offset="1140">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="525">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6146789" vertical-offset="1120" max-vertical-offset="2145">
-          <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.7522936" vertical-offset="1690" max-vertical-offset="2655">
+          <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

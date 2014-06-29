@@ -6347,22 +6347,6 @@ yesterday
                 <string name="date_time" >%2$s %1$s
                 </string>
 
-                <plurals name="abbrev_num_days_ago" >
-                    <item
-                        msgid="8463161711492680309"
-                        quantity="one">
-"χθες"
-                    </item>
-                    <item
-                        msgid="3453342639616481191"
-                        quantity="other">
-"πριν από 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ημέρες"
-                    </item>
-                </plurals>
                 <plurals name="duration_seconds" >
                     <item
                         msgid="6962015528372969481"
@@ -6393,6 +6377,22 @@ yesterday
 %d
                         </ns1:g>
  ώρες"
+                    </item>
+                </plurals>
+                <plurals name="abbrev_num_days_ago" >
+                    <item
+                        msgid="8463161711492680309"
+                        quantity="one">
+"χθες"
+                    </item>
+                    <item
+                        msgid="3453342639616481191"
+                        quantity="other">
+"πριν από 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ημέρες"
                     </item>
                 </plurals>
                 <plurals name="abbrev_in_num_days" >
@@ -10473,6 +10473,26 @@ minutes"
 "
                     </item>
                 </plurals>
+
+                <string name="date_time" >%2$s %1$s
+                </string>
+
+                <plurals name="in_num_minutes" >
+                    <item
+                        msgid="8793095251325200395"
+                        quantity="one">
+"za 1 minutu"
+                    </item>
+                    <item
+                        msgid="3330713936399448749"
+                        quantity="other">
+"za sljedeći broj minuta: 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+"
+                    </item>
+                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -10503,26 +10523,6 @@ minutes"
 %d
                         </ns1:g>
  min"
-                    </item>
-                </plurals>
-
-                <string name="date_time" >%2$s %1$s
-                </string>
-
-                <plurals name="in_num_minutes" >
-                    <item
-                        msgid="8793095251325200395"
-                        quantity="one">
-"za 1 minutu"
-                    </item>
-                    <item
-                        msgid="3330713936399448749"
-                        quantity="other">
-"za sljedeći broj minuta: 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
-"
                     </item>
                 </plurals>
                 <plurals name="num_days_ago" >
@@ -15242,22 +15242,6 @@ minutes"
  ວິ ກ່ອນໜ້ານີ້"
                     </item>
                 </plurals>
-                <plurals name="abbrev_in_num_hours" >
-                    <item
-                        msgid="3274708118124045246"
-                        quantity="one">
-"ໃນ 1 ຊົ່ວໂມງ"
-                    </item>
-                    <item
-                        msgid="3705373766798013406"
-                        quantity="other">
-"ໃນ 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ຊົ່ວໂມງ"
-                    </item>
-                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -15288,6 +15272,22 @@ minutes"
 %d
                         </ns1:g>
  ມື້"
+                    </item>
+                </plurals>
+                <plurals name="abbrev_in_num_hours" >
+                    <item
+                        msgid="3274708118124045246"
+                        quantity="one">
+"ໃນ 1 ຊົ່ວໂມງ"
+                    </item>
+                    <item
+                        msgid="3705373766798013406"
+                        quantity="other">
+"ໃນ 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ຊົ່ວໂມງ"
                     </item>
                 </plurals>
 
@@ -15571,22 +15571,6 @@ minutes"
                     </ns1:g>"
                 </string>
 
-                <plurals name="num_hours_ago" >
-                    <item
-                        msgid="9150797944610821849"
-                        quantity="one">
-"Prieš 1 valandą"
-                    </item>
-                    <item
-                        msgid="2467273239587587569"
-                        quantity="other">
-"Prieš 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- val."
-                    </item>
-                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -15613,6 +15597,22 @@ minutes"
                         msgid="547290677353727389"
                         quantity="other">
 "po 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ val."
+                    </item>
+                </plurals>
+                <plurals name="num_hours_ago" >
+                    <item
+                        msgid="9150797944610821849"
+                        quantity="one">
+"Prieš 1 valandą"
+                    </item>
+                    <item
+                        msgid="2467273239587587569"
+                        quantity="other">
+"Prieš 
                         <ns1:g id="COUNT" >
 %d
                         </ns1:g>
@@ -15917,15 +15917,6 @@ minutes"
  minūtes(-ēm)"
                     </item>
                 </plurals>
-
-                <string
-                    name="preposition_for_date"
-                    msgid="9093949757757445117" >"šādā datumā: 
-<ns1:g id="DATE" >
-%s
-                    </ns1:g>"
-                </string>
-
                 <plurals name="abbrev_in_num_days" >
                     <item
                         msgid="2178576254385739855"
@@ -15958,6 +15949,15 @@ minutes"
  s"
                     </item>
                 </plurals>
+
+                <string
+                    name="preposition_for_date"
+                    msgid="9093949757757445117" >"šādā datumā: 
+<ns1:g id="DATE" >
+%s
+                    </ns1:g>"
+                </string>
+
                 <plurals name="num_seconds_ago" >
                     <item
                         msgid="4869870056547896011"
@@ -22338,15 +22338,6 @@ minutes"
  дана"
                     </item>
                 </plurals>
-
-                <string
-                    name="preposition_for_date"
-                    msgid="9093949757757445117" >"дана 
-<ns1:g id="DATE" >
-%s
-                    </ns1:g>"
-                </string>
-
                 <plurals name="in_num_seconds" >
                     <item
                         msgid="2729745560954905102"
@@ -22379,6 +22370,15 @@ minutes"
  дана"
                     </item>
                 </plurals>
+
+                <string
+                    name="preposition_for_date"
+                    msgid="9093949757757445117" >"дана 
+<ns1:g id="DATE" >
+%s
+                    </ns1:g>"
+                </string>
+
                 <plurals name="num_minutes_ago" >
                     <item
                         msgid="3306787433088810191"
@@ -23359,22 +23359,6 @@ minutes"
  ชั่วโมง"
                     </item>
                 </plurals>
-                <plurals name="abbrev_num_hours_ago" >
-                    <item
-                        msgid="4796212039724722116"
-                        quantity="one">
-"1 ชั่วโมงที่ผ่านมา"
-                    </item>
-                    <item
-                        msgid="6889970745748538901"
-                        quantity="other">
-"
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ชั่วโมงที่ผ่านมา"
-                    </item>
-                </plurals>
                 <plurals name="abbrev_num_seconds_ago" >
                     <item
                         msgid="1849036840200069118"
@@ -23405,6 +23389,22 @@ minutes"
 %d
                         </ns1:g>
  วินาที"
+                    </item>
+                </plurals>
+                <plurals name="abbrev_num_hours_ago" >
+                    <item
+                        msgid="4796212039724722116"
+                        quantity="one">
+"1 ชั่วโมงที่ผ่านมา"
+                    </item>
+                    <item
+                        msgid="6889970745748538901"
+                        quantity="other">
+"
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ชั่วโมงที่ผ่านมา"
                     </item>
                 </plurals>
 

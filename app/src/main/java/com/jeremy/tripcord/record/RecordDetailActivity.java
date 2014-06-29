@@ -1,11 +1,16 @@
 package com.jeremy.tripcord.record;
 
-import android.graphics.Color;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -21,7 +26,9 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.LocationInfo;
+import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
+import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.record.model.RecordModel;
 
 public class RecordDetailActivity extends ActionBarActivity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
@@ -93,6 +100,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
 
         GoogleMap googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_trip_record_detail)).getMap();
         googleMap.setMyLocationEnabled(true);
+        googleMap.getUiSettings().setZoomControlsEnabled(false);
 
         polylineOptions = new PolylineOptions();
         polylineOptions.color(getResources().getColor(R.color.color_tripcord));
@@ -100,6 +108,11 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         for (LocationInfo locationInfo : tripInfo.getLocationInfoList()) {
             LatLng latLng = new LatLng(locationInfo.getLatitude(), locationInfo.getLongitude());
             drawLine(googleMap, latLng);
+        }
+
+        for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
+            addPhotoView(photoInfo.getPath());
+            addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
         }
 
         if (tripInfo.getLocationInfoList() != null && tripInfo.getLocationInfoList().size() > 0) {
@@ -119,11 +132,13 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         polyline = googleMap.addPolyline(polylineOptions);
     }
 
-    private void addMarker(GoogleMap googleMap, LatLng latLng) {
+    private void addMarker(GoogleMap googleMap, LatLng latLng, String path) {
+
+        Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(path, 50, 50);
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(bm));
 
         googleMap.addMarker(markerOptions);
     }
@@ -133,5 +148,24 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(zoomLevel).build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+    }
+
+    private void addPhotoView(String imagePath) {
+
+        Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(imagePath, 100, 100);
+
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout_trip_detail_pictures);
+        linearLayout.setGravity(Gravity.CENTER);
+
+        ImageView imageView = new ImageView(getApplicationContext());
+        imageView.setLayoutParams(new ViewGroup.LayoutParams(100, 100));
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setImageBitmap(bm);
+
+        View view = new View(getApplicationContext());
+        view.setLayoutParams(new ViewGroup.LayoutParams(10, 10));
+
+        linearLayout.addView(imageView);
+        linearLayout.addView(view);
     }
 }
