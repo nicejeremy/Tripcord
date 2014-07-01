@@ -48,10 +48,20 @@
             android:id="@+id/textView_start_from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Start from : "
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Departed from "
             android:textAlignment="gravity"
+            android:textColor="@color/color_tripcord"/>
+
+        <TextView
+            android:id="@+id/textView_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_start_from"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="You are current "
             android:textColor="@color/color_tripcord"/>
 
         <TextView
@@ -59,12 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView_start_from"
+            android:layout_below="@+id/textView_current"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Total Distance\n0"
-            android:textAlignment="center"
             android:textColor="@color/color_tripcord"/>
 
         <TextView
@@ -72,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView_start_from"
+            android:layout_below="@+id/textView_current"
             android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
@@ -99,7 +108,9 @@
                 android:layout_height="60dp"
                 android:layout_below="@id/textView_title_picture"
                 android:layout_marginTop="10dp"
-                android:background="@color/color_tripcord" >
+                android:background="@color/color_tripcord"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
 
                 <LinearLayout
                     android:id="@+id/linearLayout_pictures"

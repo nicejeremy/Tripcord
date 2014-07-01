@@ -180,14 +180,18 @@ public class DatabaseManager {
         return result;
     }
 
-    public List<PhotoInfo> selectTripPhotos(int tripSeq) {
+    public List<PhotoInfo> selectTripPhotos(int tripSeq, int limit) {
 
         List<PhotoInfo> photoInfos = new ArrayList<PhotoInfo>();
 
-        String query = "SELECT * FROM " + DatabaseHelper.TABLE_NAME_PHOTOS +
-                " WHERE " + DatabaseHelper.COLUMN_PHOTOS_TRIP_SEQ + " = " + tripSeq +
-                " LIMIT 0, 5";
-        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + DatabaseHelper.TABLE_NAME_PHOTOS +
+                " WHERE " + DatabaseHelper.COLUMN_PHOTOS_TRIP_SEQ + " = " + tripSeq);
+
+        if (limit != 0) {
+            queryBuilder.append(" LIMIT 0, " + limit);
+        }
+
+        Cursor cursor = sqLiteDatabase.rawQuery(queryBuilder.toString(), null);
 
         int indexPhotoSeq = cursor.getColumnIndex(DatabaseHelper.COLUMN_PHOTOS_SEQ);
         int indexTripSeq = cursor.getColumnIndex(DatabaseHelper.COLUMN_PHOTOS_TRIP_SEQ);
@@ -327,5 +331,23 @@ public class DatabaseManager {
         }
 
         return locationInfos;
+    }
+
+    public int deletePhotoInfo(int tripSeq) {
+
+        String where = DatabaseHelper.COLUMN_PHOTOS_TRIP_SEQ + " = " + tripSeq;
+
+        int result = sqLiteDatabase.delete(DatabaseHelper.TABLE_NAME_PHOTOS, where, null);
+
+        return result;
+    }
+
+    public int deleteLocationInfo(int tripSeq) {
+
+        String where = DatabaseHelper.COLUMN_LOCATIONS_TRIP_SEQ + " = " + tripSeq;
+
+        int result = sqLiteDatabase.delete(DatabaseHelper.TABLE_NAME_LOCATIONS, where, null);
+
+        return result;
     }
 }

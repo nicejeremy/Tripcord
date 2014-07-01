@@ -7,7 +7,7 @@
         android:title="@string/action_drop" />
 
     <item android:id="@+id/action_done"
-        android:icon="@drawable/done"
+        android:icon="@drawable/submit"
         yourapp:showAsAction="ifRoom"
         android:title="@string/action_done" />
 

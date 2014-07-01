@@ -27,6 +27,8 @@ public class RecordModel {
         databaseManager.open();
 
         int result = databaseManager.deleteCurrentTripInfo(tripSeq);
+        int resultPhoto = databaseManager.deletePhotoInfo(tripSeq);
+        int resultLocation = databaseManager.deleteLocationInfo(tripSeq);
 
         return result;
     }
@@ -61,13 +63,13 @@ public class RecordModel {
         return result;
     }
 
-    public static TripInfo loadTripInfo(Context context, int tripSeq) {
+    public static TripInfo loadTripInfo(Context context, int tripSeq, int limit) {
 
         DatabaseManager databaseManager = new DatabaseManager(context);
         databaseManager.open();
 
         TripInfo tripInfo = databaseManager.selectTripInfo(tripSeq);
-        tripInfo.setPhotoInfoList(databaseManager.selectTripPhotos(tripSeq));
+        tripInfo.setPhotoInfoList(databaseManager.selectTripPhotos(tripSeq, limit));
         tripInfo.setLocationInfoList(databaseManager.selectTripLocations(tripSeq));
 
         return tripInfo;

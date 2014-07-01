@@ -1,6 +1,8 @@
 package com.jeremy.tripcord.record;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -55,10 +57,33 @@ public class RecordResultActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(RecordResultActivity.this);
+        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                int tripSeq = (Integer) getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
+                int result = RecordModel.deleteCurrentTripInfo(getApplicationContext(), tripSeq);
+                finish();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Do Nothing
+            }
+        });
+        alertDialog.setMessage(R.string.back_key_pressed_during_recording);
+        alertDialog.show();
+    }
+
     private TripInfo loadTripInfo() {
 
         int tripSeq = (Integer) getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq);
+        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
         return tripInfo;
     }
 

@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.graphics.Bitmap;
 import android.widget.LinearLayout;
@@ -17,9 +16,10 @@ import android.widget.TextView;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
+import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -47,7 +47,7 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
             viewHolder.textViewTitle = (TextView) convertView.findViewById(R.id.textView_trip_title);
             viewHolder.textViewFrom = (TextView) convertView.findViewById(R.id.textView_trip_from);
             viewHolder.textViewDate = (TextView) convertView.findViewById(R.id.textView_trip_date);
-            viewHolder.textViewPhoto = (TextView) convertView.findViewById(R.id.textView_trip_photo);
+            viewHolder.textViewPhoto = (TextView) convertView.findViewById(R.id.textView_trip_distance);
             viewHolder.linearLayoutPhotos = (LinearLayout) convertView.findViewById(R.id.linearLayout_trip_pictures);
             convertView.setTag(viewHolder);
         } else {
@@ -60,8 +60,9 @@ public class TripInfoListAdaptor extends ArrayAdapter<TripInfo> {
         viewHolder.imageViewBackGroundMap.setImageBitmap(bitmap);
         viewHolder.textViewTitle.setText(tripInfo.getTitle());
         viewHolder.textViewFrom.setText(tripInfo.getFrom());
-        viewHolder.textViewDate.setText(tripInfo.getCreated().toString());
-        viewHolder.textViewPhoto.setText(tripInfo.getPhotoInfoList().size() + " photo(s)");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy.MM.dd");
+        viewHolder.textViewDate.setText(simpleDateFormat.format(tripInfo.getCreated()));
+        viewHolder.textViewPhoto.setText(DistanceUtil.getDistance(tripInfo.getDistance()));
 
         if (tripInfo.getPhotoInfoList() != null && tripInfo.getPhotoInfoList().size() != 0) {
             viewHolder.linearLayoutPhotos.setVisibility(View.VISIBLE);

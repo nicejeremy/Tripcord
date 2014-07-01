@@ -21,7 +21,7 @@ public class TripInfoModel {
         List<TripInfo> tripInfos = databaseManager.selectTripInfos();
 
         for(TripInfo tripInfo : tripInfos) {
-            List<PhotoInfo> photoInfos = databaseManager.selectTripPhotos(tripInfo.getTripSeq());
+            List<PhotoInfo> photoInfos = databaseManager.selectTripPhotos(tripInfo.getTripSeq(), 5);
             tripInfo.setPhotoInfoList(photoInfos);
         }
 

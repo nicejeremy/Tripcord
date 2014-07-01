@@ -22,12 +22,14 @@ public class GetAddressTask extends AsyncTask<Location, Void, String> {
     private Context context;
     private TextView textView;
     private List<String> addresses;
+    private String prefix;
 
-    public GetAddressTask(Context context, TextView textView, List<String> addresses) {
+    public GetAddressTask(Context context, TextView textView, List<String> addresses, String prefix) {
         super();
         this.context = context;
         this.textView = textView;
         this.addresses = addresses;
+        this.prefix = prefix;
     }
 
     /**
@@ -91,12 +93,13 @@ public class GetAddressTask extends AsyncTask<Location, Void, String> {
     protected void onPostExecute(String address) {
 
         Log.d("Tripcord", "GetAddressTask >> onPostExecute :: " + address);
+        String editedAddress = address.startsWith(", ") ? address.substring(2, address.length()) : address;
         if (textView != null) {
-            textView.setText("Start from : " + address);
+            textView.setText(this.prefix + editedAddress);
         }
 
-        if (!addresses.contains(address)) {
-            addresses.add(address);
+        if (!addresses.contains(editedAddress)) {
+            addresses.add(editedAddress);
         }
     }
 

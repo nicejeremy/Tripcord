@@ -1,5 +1,7 @@
 package com.jeremy.tripcord.record;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -28,7 +31,9 @@ import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.LocationInfo;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
+import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
+import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.model.RecordModel;
 
 public class RecordDetailActivity extends ActionBarActivity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
@@ -50,7 +55,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         actionBar.setDisplayShowHomeEnabled(false);
 
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq);
+        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
 
         initViews(tripInfo);
     }
@@ -69,7 +74,14 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_edit) {
+
+            return true;
+        } else if (id == R.id.action_social) {
+
+            return true;
+        } else if (id == R.id.action_drop) {
+            popupDropAlertDialog();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -103,16 +115,34 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         googleMap.getUiSettings().setZoomControlsEnabled(false);
 
         polylineOptions = new PolylineOptions();
-        polylineOptions.color(getResources().getColor(R.color.color_tripcord));
+        polylineOptions.color(getResources().getColor(R.color.color_line));
 
         for (LocationInfo locationInfo : tripInfo.getLocationInfoList()) {
             LatLng latLng = new LatLng(locationInfo.getLatitude(), locationInfo.getLongitude());
             drawLine(googleMap, latLng);
         }
 
-        for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
-            addPhotoView(photoInfo.getPath());
-            addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
+        TextView textViewTitle = (TextView) findViewById(R.id.textView_trip_detail_title);
+        textViewTitle.setText(tripInfo.getTitle());
+        TextView textViewFrom = (TextView) findViewById(R.id.textView_trip_detail_from);
+        textViewFrom.setText("From : " + tripInfo.getFrom());
+        TextView textViewTo = (TextView) findViewById(R.id.textView_trip_detail_to);
+        textViewTo.setText("To : " + tripInfo.getTo());
+        TextView textViewTime = (TextView) findViewById(R.id.textView_trip_detail_time);
+        textViewTime.setText("Time : " + TimeUtil.getTimeDescription(tripInfo.getDuringTime()));
+        TextView textViewDistance = (TextView) findViewById(R.id.textView_trip_detail_distance);
+        textViewDistance.setText("Distance : " + DistanceUtil.getDistance(tripInfo.getDistance()));
+        TextView textViewPhoto = (TextView) findViewById(R.id.textView_trip_detail_photo);
+        textViewPhoto.setText("Photo : " + String.valueOf(tripInfo.getPhotoInfoList().size()));
+
+        if (tripInfo.getPhotoInfoList().size() != 0) {
+            for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
+                addPhotoView(photoInfo.getPath());
+                addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
+            }
+        } else {
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout_trip_detail_pictures);
+            linearLayout.setVisibility(View.GONE);
         }
 
         if (tripInfo.getLocationInfoList() != null && tripInfo.getLocationInfoList().size() > 0) {
@@ -168,4 +198,27 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         linearLayout.addView(imageView);
         linearLayout.addView(view);
     }
+
+    private void popupDropAlertDialog() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(RecordDetailActivity.this);
+        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
+                int result = RecordModel.deleteCurrentTripInfo(getApplicationContext(), tripSeq);
+                finish();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Do Nothing
+            }
+        });
+        alertDialog.setMessage(R.string.ask_for_drop_journey);
+        alertDialog.show();
+    }
+
 }

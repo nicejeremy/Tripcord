@@ -24,7 +24,8 @@
     <string name="take_picture">Take a picture</string>
     <string name="back_key_pressed_during_recording">Hey~ Guy!\nTravel path is being recorded\nDo you wanna cancel this record??</string>
     <string name="yes">Yes</string>
-    <string name="no">No! Of course</string>
+    <string name="no">No -_-</string>
+    <string name="not_yet">Not yet</string>
     <string name="ask_to_finish_journey">Do you wanna finish your journey?</string>
     <string name="ready">Ready</string>
     <string name="enjoy_your_journey">Enjoy your journey</string>
@@ -43,5 +44,8 @@
     <string name="trip_detail_info_save_success">Your journey info have been saved</string>
     <string name="trip_detail_info_save_fail">Your journey didn\'t save successfully</string>
     <string name="title_activity_record_detail">Journey</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_social">Share</string>
+    <string name="ask_for_drop_journey">Are you sure ??</string>
 
 </resources>

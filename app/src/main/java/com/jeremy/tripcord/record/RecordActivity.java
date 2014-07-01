@@ -47,7 +47,9 @@ import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.manager.DistanceManager;
 import com.jeremy.tripcord.common.manager.PhotoManager;
 import com.jeremy.tripcord.common.manager.TimeManager;
+import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
+import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.model.RecordModel;
 import com.jeremy.tripcord.record.thread.GetAddressTask;
 import com.jeremy.tripcord.record.thread.TimerThread;
@@ -232,11 +234,14 @@ public class RecordActivity extends ActionBarActivity
         int zoomLevel = 0;
         if (locations.size() == 1) {
             TextView textView = (TextView) findViewById(R.id.textView_start_from);
-            GetAddressTask getAddressTask = new GetAddressTask(RecordActivity.this, textView, addresses);
+            GetAddressTask getAddressTask = new GetAddressTask(RecordActivity.this, textView, addresses, "Departed from  ");
             getAddressTask.execute(location);
 
             zoomLevel = DEFAULT_ZOOM_LEVEL;
         } else {
+            TextView textView = (TextView) findViewById(R.id.textView_current);
+            GetAddressTask getAddressTask = new GetAddressTask(RecordActivity.this, textView, addresses, "You are current  ");
+            getAddressTask.execute(location);
 
             zoomLevel = (int) googleMap.getCameraPosition().zoom;
         }
@@ -303,7 +308,7 @@ public class RecordActivity extends ActionBarActivity
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         polylineOptions = new PolylineOptions();
-        polylineOptions.color(getResources().getColor(R.color.color_tripcord));
+        polylineOptions.color(getResources().getColor(R.color.color_line));
 
         TimerThread timerThread = new TimerThread(handlerTime);
         Log.d("Tripcord", "RecordActivity >> triavel info generate success [" + tripSeq + "]");
@@ -353,7 +358,8 @@ public class RecordActivity extends ActionBarActivity
     private void updateDistance() {
 
         TextView textViewTotalDistance = (TextView) findViewById(R.id.textView_trip_result_distance);
-        textViewTotalDistance.setText("Total Distance\n" + String.format("%.0f", distanceManager.getTotalDistance()) + " m");
+        String distance = String.format("%.0f", distanceManager.getTotalDistance());
+        textViewTotalDistance.setText("Total Distance\n" + DistanceUtil.getDistance(Integer.valueOf(distance)));
 
         Log.d("Tripcord", "RecordActivity >> current distance [" + distanceManager.getTotalDistance() + "]");
     }
@@ -454,7 +460,7 @@ public class RecordActivity extends ActionBarActivity
                     finish();
                 }
             });
-            alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            alertDialog.setNegativeButton(R.string.not_yet, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     // Do Nothing
@@ -516,7 +522,7 @@ public class RecordActivity extends ActionBarActivity
 //                    int minute = timeTaken % TIME_SECOND_IN_A_MINUTE;
 //                    int hour = 0;
 //                    int day = 0;
-                    textViewTotalDistance.setText("Total Time Taken\n" + String.valueOf(duringTime));
+                    textViewTotalDistance.setText("Total Time Taken\n" + TimeUtil.getTimeDescription(duringTime));
 
                     break;
 
