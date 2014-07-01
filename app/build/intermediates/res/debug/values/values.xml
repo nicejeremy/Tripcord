@@ -81,10 +81,12 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
+    <color name="color_line">#2566AF</color>
+    <color name="color_marker_border">#FF9900</color>
     <color name="color_pause">#FF5800</color>
     <color name="color_start">#0067CB</color>
     <color name="color_stop">#FF2800</color>
-    <color name="color_tripcord">#8E6540</color>
+    <color name="color_tripcord">#5295C2</color>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values/common_colors.xml -->
     <eat-comment />
 
@@ -806,10 +808,13 @@
 
     <string name="action_done">Done</string>
     <string name="action_drop">Drop</string>
+    <string name="action_edit">Edit</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="action_social">Share</string>
     <string name="app_name">Tripcord</string>
     <string name="ask_feeling">How was your feeling?</string>
+    <string name="ask_for_drop_journey">Are you sure ??</string>
     <string name="ask_to_finish_journey">Do you wanna finish your journey?</string>
     <string name="ask_transportation">What did you take?</string>
     <string name="ask_weather">How was the weather?</string>
@@ -820,7 +825,7 @@
     <string name="common_google_play_services_enable_button" msgid="2523291102206661146">Enable Google Play services</string>
     <string name="common_google_play_services_enable_text" msgid="227660514972886228">This app won\'t work unless you enable Google Play services.</string>
     <string name="common_google_play_services_enable_title" msgid="5122002158466380389">Enable Google Play services</string>
-    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by  <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
     <string name="common_google_play_services_install_button" msgid="7153882981874058840">Get Google Play services</string>
     <string name="common_google_play_services_install_text_phone" msgid="2122112764540849864">This app won\'t run without Google Play services, which are missing from your phone.</string>
     <string name="common_google_play_services_install_text_tablet" msgid="7351599665250191022">This app won\'t run without Google Play services, which are missing from your tablet.</string>
@@ -858,14 +863,15 @@
     <string name="login">Login</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="no">No! Of course</string>
+    <string name="no">No -_-</string>
+    <string name="not_yet">Not yet</string>
     <string name="password">password</string>
     <string name="pause">Pause</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="preposition_for_date">on  <ns1:g id="date" example="May 29">%s</ns1:g></string>
-    <string name="preposition_for_time">at  <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
+    <string name="preposition_for_date">on <ns1:g id="date" example="May 29">%s</ns1:g></string>
+    <string name="preposition_for_time">at <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -873,7 +879,7 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="relative_time">" <ns1:g id="date" example="4 hours ago">%1$s</ns1:g>,  <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
+    <string name="relative_time">"<ns1:g id="date" example="4 hours ago">%1$s</ns1:g>, <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 

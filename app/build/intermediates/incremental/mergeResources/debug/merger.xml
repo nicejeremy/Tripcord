@@ -6347,6 +6347,22 @@ yesterday
                 <string name="date_time" >%2$s %1$s
                 </string>
 
+                <plurals name="abbrev_num_days_ago" >
+                    <item
+                        msgid="8463161711492680309"
+                        quantity="one">
+"χθες"
+                    </item>
+                    <item
+                        msgid="3453342639616481191"
+                        quantity="other">
+"πριν από 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ημέρες"
+                    </item>
+                </plurals>
                 <plurals name="duration_seconds" >
                     <item
                         msgid="6962015528372969481"
@@ -6377,22 +6393,6 @@ yesterday
 %d
                         </ns1:g>
  ώρες"
-                    </item>
-                </plurals>
-                <plurals name="abbrev_num_days_ago" >
-                    <item
-                        msgid="8463161711492680309"
-                        quantity="one">
-"χθες"
-                    </item>
-                    <item
-                        msgid="3453342639616481191"
-                        quantity="other">
-"πριν από 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ημέρες"
                     </item>
                 </plurals>
                 <plurals name="abbrev_in_num_days" >
@@ -15242,6 +15242,22 @@ minutes"
  ວິ ກ່ອນໜ້ານີ້"
                     </item>
                 </plurals>
+                <plurals name="abbrev_in_num_hours" >
+                    <item
+                        msgid="3274708118124045246"
+                        quantity="one">
+"ໃນ 1 ຊົ່ວໂມງ"
+                    </item>
+                    <item
+                        msgid="3705373766798013406"
+                        quantity="other">
+"ໃນ 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ຊົ່ວໂມງ"
+                    </item>
+                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -15272,22 +15288,6 @@ minutes"
 %d
                         </ns1:g>
  ມື້"
-                    </item>
-                </plurals>
-                <plurals name="abbrev_in_num_hours" >
-                    <item
-                        msgid="3274708118124045246"
-                        quantity="one">
-"ໃນ 1 ຊົ່ວໂມງ"
-                    </item>
-                    <item
-                        msgid="3705373766798013406"
-                        quantity="other">
-"ໃນ 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ຊົ່ວໂມງ"
                     </item>
                 </plurals>
 
@@ -15571,6 +15571,22 @@ minutes"
                     </ns1:g>"
                 </string>
 
+                <plurals name="num_hours_ago" >
+                    <item
+                        msgid="9150797944610821849"
+                        quantity="one">
+"Prieš 1 valandą"
+                    </item>
+                    <item
+                        msgid="2467273239587587569"
+                        quantity="other">
+"Prieš 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ val."
+                    </item>
+                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -15597,22 +15613,6 @@ minutes"
                         msgid="547290677353727389"
                         quantity="other">
 "po 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- val."
-                    </item>
-                </plurals>
-                <plurals name="num_hours_ago" >
-                    <item
-                        msgid="9150797944610821849"
-                        quantity="one">
-"Prieš 1 valandą"
-                    </item>
-                    <item
-                        msgid="2467273239587587569"
-                        quantity="other">
-"Prieš 
                         <ns1:g id="COUNT" >
 %d
                         </ns1:g>
@@ -15917,6 +15917,15 @@ minutes"
  minūtes(-ēm)"
                     </item>
                 </plurals>
+
+                <string
+                    name="preposition_for_date"
+                    msgid="9093949757757445117" >"šādā datumā: 
+<ns1:g id="DATE" >
+%s
+                    </ns1:g>"
+                </string>
+
                 <plurals name="abbrev_in_num_days" >
                     <item
                         msgid="2178576254385739855"
@@ -15949,15 +15958,6 @@ minutes"
  s"
                     </item>
                 </plurals>
-
-                <string
-                    name="preposition_for_date"
-                    msgid="9093949757757445117" >"šādā datumā: 
-<ns1:g id="DATE" >
-%s
-                    </ns1:g>"
-                </string>
-
                 <plurals name="num_seconds_ago" >
                     <item
                         msgid="4869870056547896011"
@@ -22338,6 +22338,15 @@ minutes"
  дана"
                     </item>
                 </plurals>
+
+                <string
+                    name="preposition_for_date"
+                    msgid="9093949757757445117" >"дана 
+<ns1:g id="DATE" >
+%s
+                    </ns1:g>"
+                </string>
+
                 <plurals name="in_num_seconds" >
                     <item
                         msgid="2729745560954905102"
@@ -22370,15 +22379,6 @@ minutes"
  дана"
                     </item>
                 </plurals>
-
-                <string
-                    name="preposition_for_date"
-                    msgid="9093949757757445117" >"дана 
-<ns1:g id="DATE" >
-%s
-                    </ns1:g>"
-                </string>
-
                 <plurals name="num_minutes_ago" >
                     <item
                         msgid="3306787433088810191"
@@ -23359,6 +23359,22 @@ minutes"
  ชั่วโมง"
                     </item>
                 </plurals>
+                <plurals name="abbrev_num_hours_ago" >
+                    <item
+                        msgid="4796212039724722116"
+                        quantity="one">
+"1 ชั่วโมงที่ผ่านมา"
+                    </item>
+                    <item
+                        msgid="6889970745748538901"
+                        quantity="other">
+"
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ชั่วโมงที่ผ่านมา"
+                    </item>
+                </plurals>
                 <plurals name="abbrev_num_seconds_ago" >
                     <item
                         msgid="1849036840200069118"
@@ -23389,22 +23405,6 @@ minutes"
 %d
                         </ns1:g>
  วินาที"
-                    </item>
-                </plurals>
-                <plurals name="abbrev_num_hours_ago" >
-                    <item
-                        msgid="4796212039724722116"
-                        quantity="one">
-"1 ชั่วโมงที่ผ่านมา"
-                    </item>
-                    <item
-                        msgid="6889970745748538901"
-                        quantity="other">
-"
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ชั่วโมงที่ผ่านมา"
                     </item>
                 </plurals>
 
@@ -43415,6 +43415,11 @@ false
                 qualifiers=""
                 type="drawable" />
             <file
+                name="shape_border_radius_photo_marker"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable/shape_border_radius_photo_marker.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="drawer_shadow"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-hdpi/drawer_shadow.9.png"
                 qualifiers="hdpi-v4"
@@ -43460,6 +43465,11 @@ false
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="edit"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/edit.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_drawer"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/ic_drawer.png"
                 qualifiers="xhdpi-v4"
@@ -43472,6 +43482,16 @@ false
             <file
                 name="icon"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/icon.ico"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="social"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/social.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="submit"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/submit.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
@@ -43550,6 +43570,11 @@ false
                 qualifiers=""
                 type="layout" />
             <file
+                name="view_photo_marker"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/view_photo_marker.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="global"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/menu/global.xml"
                 qualifiers=""
@@ -43587,13 +43612,17 @@ false
             <file
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml"
                 qualifiers="" >
+                <color name="color_line" >#2566AF
+                </color>
+                <color name="color_marker_border" >#FF9900
+                </color>
                 <color name="color_pause" >#FF5800
                 </color>
                 <color name="color_stop" >#FF2800
                 </color>
                 <color name="color_start" >#0067CB
                 </color>
-                <color name="color_tripcord" >#8E6540
+                <color name="color_tripcord" >#5295C2
                 </color>
             </file>
             <file
@@ -43619,6 +43648,8 @@ false
                 </string>
                 <string name="take_picture" >Take a picture
                 </string>
+                <string name="not_yet" >Not yet
+                </string>
                 <string name="title_section2" >Section 2
                 </string>
                 <string name="facebook" >Facebook
@@ -43628,6 +43659,8 @@ false
                 <string name="enter_trip_description" >Describe your journey
                 </string>
                 <string name="title_notice" >Notice
+                </string>
+                <string name="ask_for_drop_journey" >Are you sure ??
                 </string>
                 <string name="title_history" >History
                 </string>
@@ -43669,6 +43702,8 @@ false
                 </string>
                 <string name="ask_weather" >How was the weather?
                 </string>
+                <string name="action_edit" >Edit
+                </string>
                 <string name="ask_transportation" >What did you take?
                 </string>
                 <string name="stop" >Stop
@@ -43676,6 +43711,8 @@ false
                 <string name="title_settings" >Settings
                 </string>
                 <string name="action_done" >Done
+                </string>
+                <string name="action_social" >Share
                 </string>
                 <string name="ask_feeling" >How was your feeling?
                 </string>
@@ -43687,7 +43724,7 @@ false
                 </string>
                 <string name="app_name" >Tripcord
                 </string>
-                <string name="no" >No! Of course
+                <string name="no" >No -_-
                 </string>
                 <string name="enter_trip_title" >Insert this trip title
                 </string>

@@ -43,11 +43,10 @@
             android:text="2014.06.21"/>
 
         <TextView
-            android:id="@+id/textView_trip_photo"
+            android:id="@+id/textView_trip_distance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="105 photo(s)"/>
+            android:gravity="center_vertical"/>
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView_trip_picture"

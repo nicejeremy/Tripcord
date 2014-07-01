@@ -470,9 +470,9 @@ public final class R {
 		public static final int __tzdata_zoneinfomap = 0x7f0501b6;
 	}
 	public static final class string {
-		public static final int date_time = 0x7f0c0030;
-		public static final int preposition_for_date = 0x7f0c003d;
-		public static final int preposition_for_time = 0x7f0c003e;
-		public static final int relative_time = 0x7f0c0040;
+		public static final int date_time = 0x7f0c0033;
+		public static final int preposition_for_date = 0x7f0c0041;
+		public static final int preposition_for_time = 0x7f0c0042;
+		public static final int relative_time = 0x7f0c0044;
 	}
 }
