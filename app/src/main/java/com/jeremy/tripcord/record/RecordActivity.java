@@ -71,10 +71,6 @@ public class RecordActivity extends ActionBarActivity
     private static final int FASTEST_INTERVAL_IN_SECONDS = 1;
     private static final long FASTEST_INTERVAL = MILLISECONDS_PER_SECOND * FASTEST_INTERVAL_IN_SECONDS;
 
-    private static final int TIME_SECOND_IN_A_MINUTE = 60;
-    private static final int TIME_MINUTE_IN_A_HOUR = 60;
-    private static final int TIME_HOUR_IN_A_DAY = 24;
-
     private static final int WHAT_TIME = 0;
 
     private List<LatLng> locations;
@@ -189,7 +185,6 @@ public class RecordActivity extends ActionBarActivity
         Log.d("Tripcord", "RecordActivity >> onConnected");
 
         locationClient.requestLocationUpdates(locationRequest, this);
-//        isRecording = true;
     }
 
     private void takeSnapShot() {
@@ -300,7 +295,8 @@ public class RecordActivity extends ActionBarActivity
 
         locationClient = new LocationClient(RecordActivity.this, RecordActivity.this, RecordActivity.this);
         locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+//        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setPriority(LocationRequest.PRIORITY_LOW_POWER);
         locationRequest.setInterval(UPDATE_INTERVAL);
         locationRequest.setFastestInterval(FASTEST_INTERVAL);
 

@@ -1392,7 +1392,7 @@ containing a value of this type.
         public static final int layout_count_down=0x7f080084;
         public static final int layout_trip_result=0x7f080071;
         public static final int linearLayout_pictures=0x7f080065;
-        public static final int linearLayout_trip_detail_pictures=0x7f080070;
+        public static final int linearLayout_trip_detail_pictures=0x7f08006a;
         public static final int linearLayout_trip_pictures=0x7f080080;
         public static final int listMode=0x7f080001;
         public static final int listView_trip_infos=0x7f080082;
@@ -1442,12 +1442,12 @@ containing a value of this type.
         public static final int textView_title=0x7f080052;
         public static final int textView_title_picture=0x7f080063;
         public static final int textView_trip_date=0x7f08007d;
-        public static final int textView_trip_detail_distance=0x7f08006e;
-        public static final int textView_trip_detail_from=0x7f08006b;
-        public static final int textView_trip_detail_photo=0x7f08006f;
-        public static final int textView_trip_detail_time=0x7f08006d;
-        public static final int textView_trip_detail_title=0x7f08006a;
-        public static final int textView_trip_detail_to=0x7f08006c;
+        public static final int textView_trip_detail_distance=0x7f08006f;
+        public static final int textView_trip_detail_from=0x7f08006c;
+        public static final int textView_trip_detail_photo=0x7f080070;
+        public static final int textView_trip_detail_time=0x7f08006e;
+        public static final int textView_trip_detail_title=0x7f08006b;
+        public static final int textView_trip_detail_to=0x7f08006d;
         public static final int textView_trip_distance=0x7f08007e;
         public static final int textView_trip_from=0x7f08007c;
         public static final int textView_trip_result_distance=0x7f080061;

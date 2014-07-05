@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
@@ -33,9 +32,10 @@ public class ImageGalleryActivity extends FragmentActivity {
 
         int selectedIndex = getIntent().getIntExtra(CommonContants.EXTRA_KEY_SELECTED_PICTURE_INDEX, -1);
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
+        String triptitle = getIntent().getStringExtra(CommonContants.EXTRA_KEY_TRIP_TITLE);
 
         List<PhotoInfo> pathArray = loadPictureInfo(tripSeq);
-        initViews(pathArray, selectedIndex);
+        initViews(pathArray, selectedIndex, triptitle);
     }
 
     @Override
@@ -65,11 +65,13 @@ public class ImageGalleryActivity extends FragmentActivity {
         return photoInfoList;
     }
 
-    private void initViews(final List<PhotoInfo> pathArray, int selectedIndex) {
+    private void initViews(final List<PhotoInfo> pathArray, int selectedIndex, String triptitle) {
 
         final TextView textViewTitle = (TextView) findViewById(R.id.textView_gallery_title);
         final TextView textViewLocation = (TextView) findViewById(R.id.textView_gallery_location);
         final TextView textViewDate = (TextView) findViewById(R.id.textView_gallery_date);
+
+        textViewTitle.setText(triptitle);
 
         PhotoInfo firstPhotoInfo = pathArray.get(0);
         setPhotoInfo(textViewLocation, textViewDate, firstPhotoInfo);

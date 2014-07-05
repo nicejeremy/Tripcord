@@ -4,11 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.jeremy.tripcord.main.SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
 <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/fragment_setting.xml -->

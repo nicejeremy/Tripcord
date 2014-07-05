@@ -409,7 +409,7 @@ int id imageView_photo_marker 0x7f080086
 int id layout_count_down 0x7f080084
 int id layout_trip_result 0x7f080071
 int id linearLayout_pictures 0x7f080065
-int id linearLayout_trip_detail_pictures 0x7f080070
+int id linearLayout_trip_detail_pictures 0x7f08006a
 int id linearLayout_trip_pictures 0x7f080080
 int id listMode 0x7f080001
 int id listView_trip_infos 0x7f080082
@@ -459,12 +459,12 @@ int id textView_start_from 0x7f08005f
 int id textView_title 0x7f080052
 int id textView_title_picture 0x7f080063
 int id textView_trip_date 0x7f08007d
-int id textView_trip_detail_distance 0x7f08006e
-int id textView_trip_detail_from 0x7f08006b
-int id textView_trip_detail_photo 0x7f08006f
-int id textView_trip_detail_time 0x7f08006d
-int id textView_trip_detail_title 0x7f08006a
-int id textView_trip_detail_to 0x7f08006c
+int id textView_trip_detail_distance 0x7f08006f
+int id textView_trip_detail_from 0x7f08006c
+int id textView_trip_detail_photo 0x7f080070
+int id textView_trip_detail_time 0x7f08006e
+int id textView_trip_detail_title 0x7f08006b
+int id textView_trip_detail_to 0x7f08006d
 int id textView_trip_distance 0x7f08007e
 int id textView_trip_from 0x7f08007c
 int id textView_trip_result_distance 0x7f080061

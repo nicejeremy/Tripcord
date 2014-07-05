@@ -46,6 +46,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
 
     private PolylineOptions polylineOptions;
     private Polyline polyline;
+    private TripInfo tripInfo;
 
     /*
      * Activity Life Cycle
@@ -59,7 +60,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         actionBar.setDisplayShowHomeEnabled(false);
 
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
+        tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
 
         initViews(tripInfo);
     }
@@ -210,11 +211,11 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
             public void onClick(View v) {
 
                 int viewIndex = Integer.valueOf((Integer) v.getTag());
-                int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
 
                 Intent intent = new Intent(RecordDetailActivity.this, ImageGalleryActivity.class);
-                intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripSeq);
+                intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripInfo.getTripSeq());
                 intent.putExtra(CommonContants.EXTRA_KEY_SELECTED_PICTURE_INDEX, viewIndex);
+                intent.putExtra(CommonContants.EXTRA_KEY_TRIP_TITLE, tripInfo.getTitle());
                 startActivity(intent);
             }
         });
@@ -233,8 +234,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-                int result = RecordModel.deleteCurrentTripInfo(getApplicationContext(), tripSeq);
+                int result = RecordModel.deleteCurrentTripInfo(getApplicationContext(), tripInfo.getTripSeq());
                 finish();
             }
         });
