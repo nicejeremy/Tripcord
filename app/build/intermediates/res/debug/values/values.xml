@@ -787,6 +787,10 @@
         <item quantity="one">1 second ago</item>
         <item quantity="other"><ns1:g id="count">%d</ns1:g> seconds ago</item>
     </plurals>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="Gallery">Gallery</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 

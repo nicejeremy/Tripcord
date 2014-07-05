@@ -1,5 +1,6 @@
 package com.jeremy.tripcord.record.gallery;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,13 +9,18 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.record.model.RecordModel;
+import com.jeremy.tripcord.record.thread.GetAddressTask;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ImageGalleryActivity extends FragmentActivity {
@@ -59,11 +65,59 @@ public class ImageGalleryActivity extends FragmentActivity {
         return photoInfoList;
     }
 
-    private void initViews(List<PhotoInfo> pathArray, int selectedIndex) {
+    private void initViews(final List<PhotoInfo> pathArray, int selectedIndex) {
+
+        final TextView textViewTitle = (TextView) findViewById(R.id.textView_gallery_title);
+        final TextView textViewLocation = (TextView) findViewById(R.id.textView_gallery_location);
+        final TextView textViewDate = (TextView) findViewById(R.id.textView_gallery_date);
+
+        PhotoInfo firstPhotoInfo = pathArray.get(0);
+        setPhotoInfo(textViewLocation, textViewDate, firstPhotoInfo);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager_image_gallery);
         ImageGalleryAdapter pagerAdapter = new ImageGalleryAdapter(getSupportFragmentManager(), pathArray);
         viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(selectedIndex);
+//        viewPager.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                int visible = textViewTitle.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE;
+//                textViewTitle.setVisibility(visible);
+//                textViewLocation.setVisibility(visible);
+//                textViewDate.setVisibility(visible);
+//            }
+//        });
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                PhotoInfo selectedPhotoInfo = pathArray.get(position);
+                setPhotoInfo(textViewLocation, textViewDate, selectedPhotoInfo);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+    }
+
+    private void setPhotoInfo(TextView textViewLocation, TextView textViewDate, PhotoInfo photoInfo) {
+
+        Location location = new Location("dummyProider");
+        location.setLatitude(photoInfo.getLatitude());
+        location.setLongitude(photoInfo.getLongitude());
+        GetAddressTask getAddressTask = new GetAddressTask(ImageGalleryActivity.this, textViewLocation, new ArrayList<String>(), "");
+        getAddressTask.execute(location);
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy.MM.dd a hh:mm");
+        textViewDate.setText(simpleDateFormat.format(photoInfo.getCreated()));
     }
 
     private class ImageGalleryAdapter extends FragmentStatePagerAdapter {
@@ -84,5 +138,7 @@ public class ImageGalleryActivity extends FragmentActivity {
         public int getCount() {
             return this.imagePaths.size();
         }
+
+
     }
 }
