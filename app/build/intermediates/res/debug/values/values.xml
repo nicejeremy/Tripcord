@@ -825,7 +825,7 @@
     <string name="common_google_play_services_enable_button" msgid="2523291102206661146">Enable Google Play services</string>
     <string name="common_google_play_services_enable_text" msgid="227660514972886228">This app won\'t work unless you enable Google Play services.</string>
     <string name="common_google_play_services_enable_title" msgid="5122002158466380389">Enable Google Play services</string>
-    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by  <ns1:g id="app_name">%1$s</ns1:g></string>
     <string name="common_google_play_services_install_button" msgid="7153882981874058840">Get Google Play services</string>
     <string name="common_google_play_services_install_text_phone" msgid="2122112764540849864">This app won\'t run without Google Play services, which are missing from your phone.</string>
     <string name="common_google_play_services_install_text_tablet" msgid="7351599665250191022">This app won\'t run without Google Play services, which are missing from your tablet.</string>
@@ -859,6 +859,7 @@
     <string name="enter_trip_description">Describe your journey</string>
     <string name="enter_trip_title">Insert this trip title</string>
     <string name="facebook">Facebook</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -870,8 +871,8 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="preposition_for_date">on <ns1:g id="date" example="May 29">%s</ns1:g></string>
-    <string name="preposition_for_time">at <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
+    <string name="preposition_for_date">on  <ns1:g id="date" example="May 29">%s</ns1:g></string>
+    <string name="preposition_for_time">at  <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -879,7 +880,7 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="relative_time">"<ns1:g id="date" example="4 hours ago">%1$s</ns1:g>, <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
+    <string name="relative_time">" <ns1:g id="date" example="4 hours ago">%1$s</ns1:g>,  <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -888,6 +889,7 @@
     <string name="stop">Stop</string>
     <string name="take_picture">Take a picture</string>
     <string name="title_about_us">About Us</string>
+    <string name="title_activity_image_gallery">ImageGalleryActivity</string>
     <string name="title_activity_intro">IntroActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_record">Recording your journey</string>

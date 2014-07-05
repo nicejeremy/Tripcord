@@ -136,7 +136,7 @@
 
     </RelativeLayout>
 
-    <com.jeremy.tripcord.record.view.CountDownView
+    <com.jeremy.tripcord.record.countdown.CountDownView
         android:id="@+id/view_count_down"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

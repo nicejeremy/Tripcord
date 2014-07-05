@@ -1,7 +1,10 @@
 package com.jeremy.tripcord.common.utils;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.view.Display;
+import android.view.WindowManager;
 
 import java.io.ByteArrayOutputStream;
 

@@ -47,5 +47,7 @@
     <string name="action_edit">Edit</string>
     <string name="action_social">Share</string>
     <string name="ask_for_drop_journey">Are you sure ??</string>
+    <string name="title_activity_image_gallery">ImageGalleryActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

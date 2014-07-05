@@ -6347,6 +6347,22 @@ yesterday
                 <string name="date_time" >%2$s %1$s
                 </string>
 
+                <plurals name="in_num_hours" >
+                    <item
+                        msgid="7164353342477769999"
+                        quantity="one">
+"σε 1 ώρα"
+                    </item>
+                    <item
+                        msgid="547290677353727389"
+                        quantity="other">
+"σε 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ώρες"
+                    </item>
+                </plurals>
                 <plurals name="abbrev_num_days_ago" >
                     <item
                         msgid="8463161711492680309"
@@ -6377,22 +6393,6 @@ yesterday
 %d
                         </ns1:g>
  δευτερόλεπτα"
-                    </item>
-                </plurals>
-                <plurals name="in_num_hours" >
-                    <item
-                        msgid="7164353342477769999"
-                        quantity="one">
-"σε 1 ώρα"
-                    </item>
-                    <item
-                        msgid="547290677353727389"
-                        quantity="other">
-"σε 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ώρες"
                     </item>
                 </plurals>
                 <plurals name="abbrev_in_num_days" >
@@ -15242,6 +15242,22 @@ minutes"
  ວິ ກ່ອນໜ້ານີ້"
                     </item>
                 </plurals>
+                <plurals name="in_num_days" >
+                    <item
+                        msgid="5413088743009839518"
+                        quantity="one">
+"ມື້ອື່ນ"
+                    </item>
+                    <item
+                        msgid="5109449375100953247"
+                        quantity="other">
+"ໃນ 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ ມື້"
+                    </item>
+                </plurals>
                 <plurals name="abbrev_in_num_hours" >
                     <item
                         msgid="3274708118124045246"
@@ -15272,22 +15288,6 @@ minutes"
 %d
                         </ns1:g>
  ຊົ່ວໂມງ"
-                    </item>
-                </plurals>
-                <plurals name="in_num_days" >
-                    <item
-                        msgid="5413088743009839518"
-                        quantity="one">
-"ມື້ອື່ນ"
-                    </item>
-                    <item
-                        msgid="5109449375100953247"
-                        quantity="other">
-"ໃນ 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- ມື້"
                     </item>
                 </plurals>
 
@@ -15571,6 +15571,22 @@ minutes"
                     </ns1:g>"
                 </string>
 
+                <plurals name="in_num_hours" >
+                    <item
+                        msgid="7164353342477769999"
+                        quantity="one">
+"po 1 val."
+                    </item>
+                    <item
+                        msgid="547290677353727389"
+                        quantity="other">
+"po 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ val."
+                    </item>
+                </plurals>
                 <plurals name="num_hours_ago" >
                     <item
                         msgid="9150797944610821849"
@@ -15597,22 +15613,6 @@ minutes"
                         msgid="3863962854246773930"
                         quantity="other">
 "
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- val."
-                    </item>
-                </plurals>
-                <plurals name="in_num_hours" >
-                    <item
-                        msgid="7164353342477769999"
-                        quantity="one">
-"po 1 val."
-                    </item>
-                    <item
-                        msgid="547290677353727389"
-                        quantity="other">
-"po 
                         <ns1:g id="COUNT" >
 %d
                         </ns1:g>
@@ -15917,6 +15917,22 @@ minutes"
  minūtes(-ēm)"
                     </item>
                 </plurals>
+                <plurals name="abbrev_in_num_seconds" >
+                    <item
+                        msgid="5842225370795066299"
+                        quantity="one">
+"pēc 1 s"
+                    </item>
+                    <item
+                        msgid="5495880108825805108"
+                        quantity="other">
+"pēc 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ s"
+                    </item>
+                </plurals>
 
                 <string
                     name="preposition_for_date"
@@ -15940,22 +15956,6 @@ minutes"
 %d
                         </ns1:g>
  dienas(-ām)"
-                    </item>
-                </plurals>
-                <plurals name="abbrev_in_num_seconds" >
-                    <item
-                        msgid="5842225370795066299"
-                        quantity="one">
-"pēc 1 s"
-                    </item>
-                    <item
-                        msgid="5495880108825805108"
-                        quantity="other">
-"pēc 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- s"
                     </item>
                 </plurals>
                 <plurals name="num_seconds_ago" >
@@ -22338,6 +22338,22 @@ minutes"
  дана"
                     </item>
                 </plurals>
+                <plurals name="abbrev_num_days_ago" >
+                    <item
+                        msgid="8463161711492680309"
+                        quantity="one">
+"јуче"
+                    </item>
+                    <item
+                        msgid="3453342639616481191"
+                        quantity="other">
+"пре 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ дана"
+                    </item>
+                </plurals>
 
                 <string
                     name="preposition_for_date"
@@ -22361,22 +22377,6 @@ minutes"
 %d
                         </ns1:g>
  секунде(и)"
-                    </item>
-                </plurals>
-                <plurals name="abbrev_num_days_ago" >
-                    <item
-                        msgid="8463161711492680309"
-                        quantity="one">
-"јуче"
-                    </item>
-                    <item
-                        msgid="3453342639616481191"
-                        quantity="other">
-"пре 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- дана"
                     </item>
                 </plurals>
                 <plurals name="num_minutes_ago" >
@@ -23359,6 +23359,22 @@ minutes"
  ชั่วโมง"
                     </item>
                 </plurals>
+                <plurals name="duration_seconds" >
+                    <item
+                        msgid="6962015528372969481"
+                        quantity="one">
+"1 วินาที"
+                    </item>
+                    <item
+                        msgid="1886107766577166786"
+                        quantity="other">
+"
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+ วินาที"
+                    </item>
+                </plurals>
                 <plurals name="abbrev_num_hours_ago" >
                     <item
                         msgid="4796212039724722116"
@@ -23389,22 +23405,6 @@ minutes"
 %d
                         </ns1:g>
  วินาทีที่ผ่านมา"
-                    </item>
-                </plurals>
-                <plurals name="duration_seconds" >
-                    <item
-                        msgid="6962015528372969481"
-                        quantity="one">
-"1 วินาที"
-                    </item>
-                    <item
-                        msgid="1886107766577166786"
-                        quantity="other">
-"
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
- วินาที"
                     </item>
                 </plurals>
 
@@ -43520,6 +43520,11 @@ false
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="activity_image_gallery"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/activity_image_gallery.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_intro"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/activity_intro.xml"
                 qualifiers=""
@@ -43577,6 +43582,11 @@ false
             <file
                 name="global"
                 path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/menu/global.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="image_gallery"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/menu/image_gallery.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -43652,6 +43662,8 @@ false
                 </string>
                 <string name="title_section2" >Section 2
                 </string>
+                <string name="hello_blank_fragment" >Hello blank fragment
+                </string>
                 <string name="facebook" >Facebook
                 </string>
                 <string name="navigation_drawer_close" >Close navigation drawer
@@ -43695,6 +43707,8 @@ false
                 <string name="navigation_drawer_open" >Open navigation drawer
                 </string>
                 <string name="back_key_pressed_during_recording" >Hey~ Guy!\nTravel path is being recorded\nDo you wanna cancel this record??
+                </string>
+                <string name="title_activity_image_gallery" >ImageGalleryActivity
                 </string>
                 <string name="email" >e-mail
                 </string>
@@ -43763,6 +43777,11 @@ false
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="fragment_image"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/layout/fragment_image.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/generated/res/rs/debug" />
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/generated/res/generated/debug" />

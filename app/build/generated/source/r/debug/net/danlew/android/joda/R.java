@@ -471,8 +471,8 @@ public final class R {
 	}
 	public static final class string {
 		public static final int date_time = 0x7f0c0033;
-		public static final int preposition_for_date = 0x7f0c0041;
-		public static final int preposition_for_time = 0x7f0c0042;
-		public static final int relative_time = 0x7f0c0044;
+		public static final int preposition_for_date = 0x7f0c0042;
+		public static final int preposition_for_time = 0x7f0c0043;
+		public static final int relative_time = 0x7f0c0045;
 	}
 }

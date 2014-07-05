@@ -67,6 +67,10 @@
             android:name="com.jeremy.tripcord.record.RecordDetailActivity"
             android:label="@string/title_activity_record_detail" >
         </activity>
+        <activity
+            android:name="com.jeremy.tripcord.record.gallery.ImageGalleryActivity"
+            android:label="@string/title_activity_image_gallery" >
+        </activity>
     </application>
 
 </manifest>

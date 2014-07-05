@@ -15,7 +15,6 @@ dependencies {
             dirs 'libs'
         }
     }
-
     compile fileTree(dir: 'libs', include: '*.jar')
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
@@ -26,12 +25,10 @@ dependencies {
 android {
     compileSdkVersion 19
     buildToolsVersion '19.1.0'
-
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 19
     }
-
 //    sourceSets {
 //        main {
 //            manifest.srcFile 'AndroidManifest.xml'
@@ -56,4 +53,8 @@ android {
 //        debug.setRoot('build-types/debug')
 //        release.setRoot('build-types/release')
 //    }
+    productFlavors {
+    }
+    buildTypes {
+    }
 }

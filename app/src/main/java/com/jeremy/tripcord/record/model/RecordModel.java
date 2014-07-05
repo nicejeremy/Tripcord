@@ -4,7 +4,10 @@ import android.content.Context;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.jeremy.tripcord.common.database.DatabaseManager;
+import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
+
+import java.util.List;
 
 /**
  * Created by asura1983 on 2014. 6. 29..
@@ -83,5 +86,15 @@ public class RecordModel {
         int result = databaseManager.updateTripDetailInfo(tripSeq, title, description, feel, transportation, weather);
 
         return result;
+    }
+
+    public static List<PhotoInfo> loadTripPictureInfo(Context context, int tripSeq) {
+
+        DatabaseManager databaseManager = new DatabaseManager(context);
+        databaseManager.open();
+
+        List<PhotoInfo> photoInfos = databaseManager.selectTripPhotos(tripSeq, 0);
+
+        return photoInfos;
     }
 }

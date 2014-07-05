@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -53,8 +52,8 @@ import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.model.RecordModel;
 import com.jeremy.tripcord.record.thread.GetAddressTask;
 import com.jeremy.tripcord.record.thread.TimerThread;
-import com.jeremy.tripcord.record.view.CountDownObserver;
-import com.jeremy.tripcord.record.view.CountDownView;
+import com.jeremy.tripcord.record.countdown.CountDownObserver;
+import com.jeremy.tripcord.record.countdown.CountDownView;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

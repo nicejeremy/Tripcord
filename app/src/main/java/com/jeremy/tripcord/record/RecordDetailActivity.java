@@ -2,6 +2,7 @@ package com.jeremy.tripcord.record;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -34,7 +35,10 @@ import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
+import com.jeremy.tripcord.record.gallery.ImageGalleryActivity;
 import com.jeremy.tripcord.record.model.RecordModel;
+
+import java.util.List;
 
 public class RecordDetailActivity extends ActionBarActivity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
 
@@ -136,10 +140,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         textViewPhoto.setText("Photo : " + String.valueOf(tripInfo.getPhotoInfoList().size()));
 
         if (tripInfo.getPhotoInfoList().size() != 0) {
-            for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
-                addPhotoView(photoInfo.getPath());
-                addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
-            }
+            addPhoto(googleMap, tripInfo.getPhotoInfoList());
         } else {
             LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout_trip_detail_pictures);
             linearLayout.setVisibility(View.GONE);
@@ -150,6 +151,17 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
             LatLng latLng = new LatLng(firstLocationInfo.getLatitude(), firstLocationInfo.getLongitude());
             moveFocus(googleMap, latLng, DEFAULT_ZOOM_LEVEL);
         }
+    }
+
+    private void addPhoto(GoogleMap googleMap, List<PhotoInfo> photoInfoList) {
+
+        for(int i = 0; i < photoInfoList.size(); i++) {
+//            for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
+            PhotoInfo photoInfo = photoInfoList.get(i);
+            addPhotoView(i, photoInfo.getPath());
+            addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
+        }
+
     }
 
     private void drawLine(GoogleMap googleMap, LatLng latLng) {
@@ -180,7 +192,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
-    private void addPhotoView(String imagePath) {
+    private void addPhotoView(int index, String imagePath) {
 
         Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(imagePath, 100, 100);
 
@@ -191,6 +203,21 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         imageView.setLayoutParams(new ViewGroup.LayoutParams(100, 100));
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageBitmap(bm);
+        imageView.setTag(index);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int viewIndex = Integer.valueOf((Integer) v.getTag());
+                int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
+
+                Intent intent = new Intent(RecordDetailActivity.this, ImageGalleryActivity.class);
+                intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripSeq);
+                intent.putExtra(CommonContants.EXTRA_KEY_SELECTED_PICTURE_INDEX, viewIndex);
+                startActivity(intent);
+            }
+        });
 
         View view = new View(getApplicationContext());
         view.setLayoutParams(new ViewGroup.LayoutParams(10, 10));
