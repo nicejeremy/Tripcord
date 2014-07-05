@@ -61,6 +61,9 @@ public class MainActivity extends ActionBarActivity
             case 1:
                 break;
             case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, SettingFragment.newInstance())
+                        .commit();
                 break;
             case 3:
                 break;
