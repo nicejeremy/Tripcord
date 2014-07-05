@@ -1,8 +1,105 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jeremy.tripcord.main.SettingFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView_setting_title_sns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sns"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="#111111"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_facebook"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/facebook"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/button_setting_facebook_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/color_tripcord"
+                android:padding="5dp"
+                android:text="@string/connect"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
 
 
-</FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_setting_title_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/share"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="#111111"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="@string/sharing_automatically"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <CheckBox
+                android:id="@+id/checkbox_setting_share"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

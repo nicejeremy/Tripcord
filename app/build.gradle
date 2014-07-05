@@ -21,6 +21,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:4.+'
     compile 'net.danlew:android.joda:2.3.3'
     compile project(':facebook')
+    compile files('libs/simple.facebook-2.1.jar')
 }
 
 android {

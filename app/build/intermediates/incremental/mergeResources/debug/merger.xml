@@ -11434,26 +11434,6 @@ minutes"
 "
                     </item>
                 </plurals>
-
-                <string name="date_time" >%2$s %1$s
-                </string>
-
-                <plurals name="in_num_minutes" >
-                    <item
-                        msgid="8793095251325200395"
-                        quantity="one">
-"za 1 minutu"
-                    </item>
-                    <item
-                        msgid="3330713936399448749"
-                        quantity="other">
-"za sljedeći broj minuta: 
-                        <ns1:g id="COUNT" >
-%d
-                        </ns1:g>
-"
-                    </item>
-                </plurals>
                 <plurals name="duration_hours" >
                     <item
                         msgid="8917467491248809972"
@@ -11484,6 +11464,26 @@ minutes"
 %d
                         </ns1:g>
  min"
+                    </item>
+                </plurals>
+
+                <string name="date_time" >%2$s %1$s
+                </string>
+
+                <plurals name="in_num_minutes" >
+                    <item
+                        msgid="8793095251325200395"
+                        quantity="one">
+"za 1 minutu"
+                    </item>
+                    <item
+                        msgid="3330713936399448749"
+                        quantity="other">
+"za sljedeći broj minuta: 
+                        <ns1:g id="COUNT" >
+%d
+                        </ns1:g>
+"
                     </item>
                 </plurals>
                 <plurals name="num_days_ago" >
@@ -44643,6 +44643,8 @@ false
                 </string>
                 <string name="ready" >Ready
                 </string>
+                <string name="app_id" >260947220766101
+                </string>
                 <string name="trip_detail_info_save_fail" >Your journey didn\'t save successfully
                 </string>
                 <string name="password" >password
@@ -44669,6 +44671,8 @@ false
                 </string>
                 <string name="enter_trip_title" >Insert this trip title
                 </string>
+                <string name="connect" >Connect
+                </string>
                 <string name="not_yet" >Not yet
                 </string>
                 <string name="take_picture" >Take a picture
@@ -44683,11 +44687,15 @@ false
                 </string>
                 <string name="enjoy_your_journey" >Enjoy your journey
                 </string>
+                <string name="disconnect" >Disconnect
+                </string>
                 <string name="action_example" >Example action
                 </string>
                 <string name="trip_detail_info_save_success" >Your journey info have been saved
                 </string>
                 <string name="title_activity_record" >Recording your journey
+                </string>
+                <string name="app_namespace" >tripcord_jeremy
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
@@ -44707,15 +44715,21 @@ false
                 </string>
                 <string name="title_settings" >Settings
                 </string>
-                <string name="ask_feeling" >How was your feeling?
-                </string>
                 <string name="action_social" >Share
+                </string>
+                <string name="ask_feeling" >How was your feeling?
                 </string>
                 <string name="pause" >Pause
                 </string>
+                <string name="sns" >SNS
+                </string>
                 <string name="app_name" >Tripcord
                 </string>
+                <string name="share" >Share
+                </string>
                 <string name="title_activity_login" >LoginActivity
+                </string>
+                <string name="sharing_automatically" >Sharing automatically
                 </string>
             </file>
             <file
@@ -44750,6 +44764,11 @@ false
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="icon_facebook"
+                path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable-xhdpi/icon_facebook.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
         </source>
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/generated/res/rs/debug" />
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/generated/res/generated/debug" />

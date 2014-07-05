@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/facebook/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/facebook/src/debug/assets" />
+    </dataSet>
+
+</merger>

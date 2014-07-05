@@ -296,7 +296,7 @@ public class RecordActivity extends ActionBarActivity
         locationClient = new LocationClient(RecordActivity.this, RecordActivity.this, RecordActivity.this);
         locationRequest = LocationRequest.create();
 //        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setPriority(LocationRequest.PRIORITY_LOW_POWER);
+        locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
         locationRequest.setInterval(UPDATE_INTERVAL);
         locationRequest.setFastestInterval(FASTEST_INTERVAL);
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_id">260947220766101</string>
+    <string name="app_namespace">tripcord_jeremy</string>
+
     <string name="app_name">Tripcord</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -50,5 +53,10 @@
     <string name="title_activity_image_gallery">ImageGalleryActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Gallery">Gallery</string>
+    <string name="share">Share</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="sns">SNS</string>
+    <string name="sharing_automatically">Sharing automatically</string>
 
 </resources>
