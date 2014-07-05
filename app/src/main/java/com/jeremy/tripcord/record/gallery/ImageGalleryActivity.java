@@ -65,15 +65,15 @@ public class ImageGalleryActivity extends FragmentActivity {
         return photoInfoList;
     }
 
-    private void initViews(final List<PhotoInfo> pathArray, int selectedIndex, String triptitle) {
+    private void initViews(final List<PhotoInfo> pathArray, int selectedIndex, final String triptitle) {
 
         final TextView textViewTitle = (TextView) findViewById(R.id.textView_gallery_title);
         final TextView textViewLocation = (TextView) findViewById(R.id.textView_gallery_location);
         final TextView textViewDate = (TextView) findViewById(R.id.textView_gallery_date);
 
-        textViewTitle.setText(triptitle);
+        textViewTitle.setText(triptitle + " (" + (selectedIndex + 1) + "/" + pathArray.size() + ")");
 
-        PhotoInfo firstPhotoInfo = pathArray.get(0);
+        PhotoInfo firstPhotoInfo = pathArray.get(selectedIndex);
         setPhotoInfo(textViewLocation, textViewDate, firstPhotoInfo);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager_image_gallery);
@@ -99,6 +99,7 @@ public class ImageGalleryActivity extends FragmentActivity {
             @Override
             public void onPageSelected(int position) {
 
+                textViewTitle.setText(triptitle + " (" + (position + 1) + "/" + pathArray.size() + ")");
                 PhotoInfo selectedPhotoInfo = pathArray.get(position);
                 setPhotoInfo(textViewLocation, textViewDate, selectedPhotoInfo);
             }
