@@ -20,6 +20,7 @@ dependencies {
     compile 'com.android.support:support-v4:19.+'
     compile 'com.google.android.gms:play-services:4.+'
     compile 'net.danlew:android.joda:2.3.3'
+    compile project(':facebook')
 }
 
 android {
