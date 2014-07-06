@@ -128,12 +128,12 @@ public final class R {
 		public static final int google_play_services_version = 0x7f0a0001;
 	}
 	public static final class string {
-		public static final int auth_client_needs_enabling_title = 0x7f0c007e;
-		public static final int auth_client_needs_installation_title = 0x7f0c007f;
-		public static final int auth_client_needs_update_title = 0x7f0c0080;
-		public static final int auth_client_play_services_err_notification_msg = 0x7f0c0081;
-		public static final int auth_client_requested_by_msg = 0x7f0c0082;
-		public static final int auth_client_using_bad_version_title = 0x7f0c0083;
+		public static final int auth_client_needs_enabling_title = 0x7f0c007f;
+		public static final int auth_client_needs_installation_title = 0x7f0c0080;
+		public static final int auth_client_needs_update_title = 0x7f0c0081;
+		public static final int auth_client_play_services_err_notification_msg = 0x7f0c0082;
+		public static final int auth_client_requested_by_msg = 0x7f0c0083;
+		public static final int auth_client_using_bad_version_title = 0x7f0c0084;
 		public static final int common_google_play_services_enable_button = 0x7f0c0038;
 		public static final int common_google_play_services_enable_text = 0x7f0c0039;
 		public static final int common_google_play_services_enable_title = 0x7f0c003a;
@@ -159,7 +159,7 @@ public final class R {
 		public static final int common_google_play_services_update_title = 0x7f0c004e;
 		public static final int common_signin_button_text = 0x7f0c004f;
 		public static final int common_signin_button_text_long = 0x7f0c0050;
-		public static final int wallet_buy_button_place_holder = 0x7f0c007c;
+		public static final int wallet_buy_button_place_holder = 0x7f0c007d;
 	}
 	public static final class style {
 		public static final int WalletFragmentDefaultButtonTextAppearance = 0x7f0d003d;

@@ -28,21 +28,21 @@ public class TripcordApplication extends Application {
 
     private void setFacebookConfigure() {
 
-        Permission[] permissions = new Permission[] {
-                Permission.PUBLIC_PROFILE,
-                Permission.EMAIL,
-                Permission.USER_FRIENDS
-        };
-
-        SimpleFacebookConfiguration configuration = new SimpleFacebookConfiguration.Builder()
-                .setAppId(getResources().getString(R.string.app_id))
-                .setNamespace(getResources().getString(R.string.app_namespace))
-                .setPermissions(permissions)
-                .setAppSecret(getResources().getString(R.string.app_secret))
-                .build();
-
-        Log.d("Tripcord", "TripcordApplication >> Facebook configuration [" + configuration.toString() + "]");
-
-        SimpleFacebook.setConfiguration(configuration);
+//        Permission[] permissions = new Permission[] {
+//                Permission.PUBLIC_PROFILE,
+//                Permission.EMAIL,
+//                Permission.USER_FRIENDS
+//        };
+//
+//        SimpleFacebookConfiguration configuration = new SimpleFacebookConfiguration.Builder()
+//                .setAppId(getResources().getString(R.string.app_id))
+//                .setNamespace(getResources().getString(R.string.app_namespace))
+//                .setPermissions(permissions)
+//                .setAppSecret(getResources().getString(R.string.app_secret))
+//                .build();
+//
+//        Log.d("Tripcord", "TripcordApplication >> Facebook configuration [" + configuration.toString() + "]");
+//
+//        SimpleFacebook.setConfiguration(configuration);
     }
 }

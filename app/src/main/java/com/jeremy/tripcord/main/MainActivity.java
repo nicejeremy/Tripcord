@@ -59,6 +59,9 @@ public class MainActivity extends ActionBarActivity
                         .commit();
                 break;
             case 1:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, NoticeFragment.newInstance())
+                        .commit();
                 break;
             case 2:
                 fragmentManager.beginTransaction()
@@ -66,6 +69,9 @@ public class MainActivity extends ActionBarActivity
                         .commit();
                 break;
             case 3:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, AboutUsFragment.newInstance())
+                        .commit();
                 break;
             default:
                 break;

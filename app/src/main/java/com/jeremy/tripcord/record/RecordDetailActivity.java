@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.facebook.UiLifecycleHelper;
+import com.facebook.android.Facebook;
+import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,6 +37,7 @@ import com.jeremy.tripcord.common.database.domain.LocationInfo;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.DistanceUtil;
+import com.jeremy.tripcord.common.utils.FacebookUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.gallery.ImageGalleryActivity;
@@ -48,6 +53,8 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     private Polyline polyline;
     private TripInfo tripInfo;
 
+    private UiLifecycleHelper uiHelper;
+
     /*
      * Activity Life Cycle
      */
@@ -59,6 +66,9 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
 
+        uiHelper = new UiLifecycleHelper(this, null);
+        uiHelper.onCreate(savedInstanceState);
+
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
         tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
 
@@ -66,8 +76,49 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+            @Override
+            public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+                Log.e("Tripcord", String.format("Error: %s", error.toString()));
+            }
+
+            @Override
+            public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+                Log.i("Tripcord", "Success!");
+            }
+        });
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        uiHelper.onResume();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        uiHelper.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        uiHelper.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        uiHelper.onDestroy();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.record_detail, menu);
         return true;
     }
@@ -75,15 +126,13 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
         if (id == R.id.action_edit) {
 
             return true;
         } else if (id == R.id.action_social) {
-
+            showJourneyFacebookPostDialog();
             return true;
         } else if (id == R.id.action_drop) {
             popupDropAlertDialog();
@@ -157,7 +206,6 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     private void addPhoto(GoogleMap googleMap, List<PhotoInfo> photoInfoList) {
 
         for(int i = 0; i < photoInfoList.size(); i++) {
-//            for (PhotoInfo photoInfo : tripInfo.getPhotoInfoList()) {
             PhotoInfo photoInfo = photoInfoList.get(i);
             addPhotoView(i, photoInfo.getPath());
             addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
@@ -245,6 +293,25 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
             }
         });
         alertDialog.setMessage(R.string.ask_for_drop_journey);
+        alertDialog.show();
+    }
+
+    private void showJourneyFacebookPostDialog() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(RecordDetailActivity.this);
+        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Do Nothing
+            }
+        });
+        alertDialog.setMessage(R.string.post_on_facebook_your_journey);
         alertDialog.show();
     }
 

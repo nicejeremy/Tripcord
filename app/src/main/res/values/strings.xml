@@ -63,5 +63,6 @@
     <string name="disconnect">Disconnect</string>
     <string name="sns">SNS</string>
     <string name="sharing_automatically">Sharing automatically</string>
+    <string name="post_on_facebook_your_journey">Do you wanna post your journey on facebook wall</string>
 
 </resources>

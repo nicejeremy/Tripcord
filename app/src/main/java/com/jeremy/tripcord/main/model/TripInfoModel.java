@@ -1,11 +1,19 @@
 package com.jeremy.tripcord.main.model;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 
+import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.DatabaseManager;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,19 +21,40 @@ import java.util.List;
  */
 public class TripInfoModel {
 
-    public static List<TripInfo> loadTripInfoList(Context context) {
+    public static void loadTripInfoList(Context context, Handler handler) {
 
-        DatabaseManager databaseManager = new DatabaseManager(context);
-        databaseManager.open();
+        TripInfoListRunnable tripInfoListRunnable = new TripInfoListRunnable(context, handler);
+        tripInfoListRunnable.run();
+    }
 
-        List<TripInfo> tripInfos = databaseManager.selectTripInfos();
+    private static class TripInfoListRunnable implements Runnable {
 
-        for(TripInfo tripInfo : tripInfos) {
-            List<PhotoInfo> photoInfos = databaseManager.selectTripPhotos(tripInfo.getTripSeq(), 5);
-            tripInfo.setPhotoInfoList(photoInfos);
+        private Context context;
+        private Handler handler;
+
+        public TripInfoListRunnable(Context context, Handler handler) {
+            this.context = context;
+            this.handler = handler;
         }
 
-        return tripInfos;
+        @Override
+        public void run() {
+
+            DatabaseManager databaseManager = new DatabaseManager(context);
+            databaseManager.open();
+
+            List<TripInfo> tripInfos = databaseManager.selectTripInfos();
+
+            for(TripInfo tripInfo : tripInfos) {
+                List<PhotoInfo> photoInfos = databaseManager.selectTripPhotos(tripInfo.getTripSeq(), 5);
+                tripInfo.setPhotoInfoList(photoInfos);
+            }
+
+            Message message = new Message();
+            message.what = CommonContants.WHAT_LOAD_TRIP_LIST;
+            message.obj = tripInfos;
+            handler.sendMessage(message);
+        }
     }
 
 }

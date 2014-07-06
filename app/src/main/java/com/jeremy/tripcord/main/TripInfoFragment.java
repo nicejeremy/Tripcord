@@ -102,12 +102,7 @@ public class TripInfoFragment extends Fragment {
 
     private void loadTripInfoList() {
 
-        tripInfoList = TripInfoModel.loadTripInfoList(getActivity().getApplicationContext());
-
-        TripInfoListAdaptor tripInfoListAdaptor = (TripInfoListAdaptor) listViewTripInfos.getAdapter();
-        tripInfoListAdaptor.clear();
-        tripInfoListAdaptor.addAll(tripInfoList);
-        tripInfoListAdaptor.notifyDataSetChanged();
+        TripInfoModel.loadTripInfoList(getActivity().getApplicationContext(), handler);
     }
 
     Handler handler = new Handler() {
@@ -123,6 +118,12 @@ public class TripInfoFragment extends Fragment {
                     intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripInfo.getTripSeq());
                     startActivity(intent);
                     break;
+                case CommonContants.WHAT_LOAD_TRIP_LIST :
+                    tripInfoList = (List<TripInfo>) msg.obj;
+                    TripInfoListAdaptor tripInfoListAdaptor = (TripInfoListAdaptor) listViewTripInfos.getAdapter();
+                    tripInfoListAdaptor.clear();
+                    tripInfoListAdaptor.addAll(tripInfoList);
+                    tripInfoListAdaptor.notifyDataSetChanged();
                 default:
                     break;
             }

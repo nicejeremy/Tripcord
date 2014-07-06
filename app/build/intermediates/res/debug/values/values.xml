@@ -976,6 +976,7 @@
     <string name="not_yet">Not yet</string>
     <string name="password">password</string>
     <string name="pause">Pause</string>
+    <string name="post_on_facebook_your_journey">Do you wanna post your journey on facebook wall</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 

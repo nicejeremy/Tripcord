@@ -11,4 +11,5 @@ public class CommonContants {
     public static final String EXTRA_KEY_TRIP_TITLE = "tripTitle";
 
     public static final int WHAT_TRIP_LIST_CLICKED = 0;
+    public static final int WHAT_LOAD_TRIP_LIST = 1;
 }

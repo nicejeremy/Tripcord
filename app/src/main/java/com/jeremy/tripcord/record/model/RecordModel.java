@@ -66,6 +66,16 @@ public class RecordModel {
         return result;
     }
 
+    public static int updateTripDetailInfo(Context context, int tripSeq, String title, String description, String feel, String transportation, String weather) {
+
+        DatabaseManager databaseManager = new DatabaseManager(context);
+        databaseManager.open();
+
+        int result = databaseManager.updateTripDetailInfo(tripSeq, title, description, feel, transportation, weather);
+
+        return result;
+    }
+
     public static TripInfo loadTripInfo(Context context, int tripSeq, int limit) {
 
         DatabaseManager databaseManager = new DatabaseManager(context);
@@ -78,16 +88,6 @@ public class RecordModel {
         return tripInfo;
     }
 
-    public static int updateTripDetailInfo(Context context, int tripSeq, String title, String description, String feel, String transportation, String weather) {
-
-        DatabaseManager databaseManager = new DatabaseManager(context);
-        databaseManager.open();
-
-        int result = databaseManager.updateTripDetailInfo(tripSeq, title, description, feel, transportation, weather);
-
-        return result;
-    }
-
     public static List<PhotoInfo> loadTripPictureInfo(Context context, int tripSeq) {
 
         DatabaseManager databaseManager = new DatabaseManager(context);
@@ -97,4 +97,5 @@ public class RecordModel {
 
         return photoInfos;
     }
+
 }

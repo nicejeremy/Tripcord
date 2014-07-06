@@ -142,6 +142,7 @@ public class SettingFragment extends android.support.v4.app.Fragment {
 //        simpleFacebook.onActivityResult(getActivity(), requestCode, resultCode, data);
 //        Session.getActiveSession().onActivityResult(getActivity(), requestCode, resultCode, data);
         uiHelper.onActivityResult(requestCode, resultCode, data);
+        Log.d("Tripcord", "SettingFragment >> onActivityResult :: " + data.toString());
         super.onActivityResult(requestCode, resultCode, data);
     }
 
