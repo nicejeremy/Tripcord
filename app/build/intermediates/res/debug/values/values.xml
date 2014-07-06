@@ -886,6 +886,7 @@
     <string name="app_id">260947220766101</string>
     <string name="app_name">Tripcord</string>
     <string name="app_namespace">tripcord_jeremy</string>
+    <string name="app_secret">9e610da99d9c520c206a90db1ad23f6f</string>
     <string name="ask_feeling">How was your feeling?</string>
     <string name="ask_for_drop_journey">Are you sure ??</string>
     <string name="ask_to_finish_journey">Do you wanna finish your journey?</string>

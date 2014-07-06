@@ -38,6 +38,7 @@ public class TripcordApplication extends Application {
                 .setAppId(getResources().getString(R.string.app_id))
                 .setNamespace(getResources().getString(R.string.app_namespace))
                 .setPermissions(permissions)
+                .setAppSecret(getResources().getString(R.string.app_secret))
                 .build();
 
         Log.d("Tripcord", "TripcordApplication >> Facebook configuration [" + configuration.toString() + "]");
