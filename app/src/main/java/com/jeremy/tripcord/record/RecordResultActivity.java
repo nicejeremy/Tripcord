@@ -14,8 +14,11 @@ import android.widget.Toast;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
+import com.jeremy.tripcord.common.utils.StringUtil;
 import com.jeremy.tripcord.record.imagebutton.ImageRadioButton;
 import com.jeremy.tripcord.record.model.RecordModel;
+
+import java.util.List;
 
 public class RecordResultActivity extends ActionBarActivity {
 
@@ -142,9 +145,9 @@ public class RecordResultActivity extends ActionBarActivity {
         ImageRadioButton imageRadioButtonTransport = (ImageRadioButton) findViewById(R.id.imageRadioButton_transport);
         ImageRadioButton imageRadioButtonWeather = (ImageRadioButton) findViewById(R.id.imageRadioButton_weather);
 
-        String feel = imageRadioButtonFeeling.getSelectedItemValues().toString();
-        String transportation = imageRadioButtonTransport.getSelectedItemValues().toString();
-        String weather = imageRadioButtonWeather.getSelectedItemValues().toString();
+        String feel= StringUtil.convertStringArrayToString(imageRadioButtonFeeling.getSelectedItemValues(), ",");
+        String transportation = StringUtil.convertStringArrayToString(imageRadioButtonTransport.getSelectedItemValues(), ",");
+        String weather = StringUtil.convertStringArrayToString(imageRadioButtonWeather.getSelectedItemValues(), ",");
 
         int result = RecordModel.updateTripDetailInfo(getApplicationContext(), tripSeq, title, description, feel, transportation, weather);
 
