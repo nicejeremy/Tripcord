@@ -64,5 +64,20 @@
     <string name="sns">SNS</string>
     <string name="sharing_automatically">Sharing automatically</string>
     <string name="post_on_facebook_your_journey">Do you wanna post your journey on facebook wall</string>
+    <string name="feel_fun">Fun</string>
+    <string name="feel_happy">Happy</string>
+    <string name="feel_soso">Soso</string>
+    <string name="feel_unhappy">Unhappy</string>
+    <string name="feel_hard">Hard</string>
+    <string name="transport_walk">Walk</string>
+    <string name="transport_car">Car</string>
+    <string name="transport_bus">Bus</string>
+    <string name="transport_train">Train</string>
+    <string name="transport_flight">Flight</string>
+    <string name="weather_sunny">Sunny</string>
+    <string name="weather_little_bit_cloudy">Little bit cloudy</string>
+    <string name="weather_cloudy">Cloudy</string>
+    <string name="weather_rainy">Rainy</string>
+    <string name="weather_snow">Snow</string>
 
 </resources>

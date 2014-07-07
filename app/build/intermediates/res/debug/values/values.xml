@@ -967,6 +967,11 @@
     <string name="enter_trip_description">Describe your journey</string>
     <string name="enter_trip_title">Insert this trip title</string>
     <string name="facebook">Facebook</string>
+    <string name="feel_fun">Fun</string>
+    <string name="feel_happy">Happy</string>
+    <string name="feel_hard">Hard</string>
+    <string name="feel_soso">Soso</string>
+    <string name="feel_unhappy">Unhappy</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
@@ -1013,6 +1018,11 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="title_settings">Settings</string>
+    <string name="transport_bus">Bus</string>
+    <string name="transport_car">Car</string>
+    <string name="transport_flight">Flight</string>
+    <string name="transport_train">Train</string>
+    <string name="transport_walk">Walk</string>
     <string name="trip_detail_info_save_fail">Your journey didn\'t save successfully</string>
     <string name="trip_detail_info_save_success">Your journey info have been saved</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values/wallet_strings.xml -->
@@ -1022,6 +1032,11 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="weather_cloudy">Cloudy</string>
+    <string name="weather_little_bit_cloudy">Little bit cloudy</string>
+    <string name="weather_rainy">Rainy</string>
+    <string name="weather_snow">Snow</string>
+    <string name="weather_sunny">Sunny</string>
     <string name="yes">Yes</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/styles.xml -->
     <eat-comment />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" android:drawable="@color/color_start" />
+    <item android:state_selected="true" android:drawable="@color/color_tripcord" />
+
+</selector><!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/drawable/selectable_button.xml -->
