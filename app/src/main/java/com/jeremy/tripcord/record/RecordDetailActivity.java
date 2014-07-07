@@ -189,11 +189,11 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         else textViewFeeling.setText(getString(R.string.label_feeling) + tripInfo.getFeel());
 
         TextView textViewTransport = (TextView) findViewById(R.id.textView_trip_detail_transport);
-        if (StringUtil.isEmpty(tripInfo.getFeel())) textViewTransport.setVisibility(View.GONE);
+        if (StringUtil.isEmpty(tripInfo.getTransportation())) textViewTransport.setVisibility(View.GONE);
         else textViewTransport.setText(getString(R.string.label_transport) + tripInfo.getTransportation());
 
         TextView textViewWeather = (TextView) findViewById(R.id.textView_trip_detail_weather);
-        if (StringUtil.isEmpty(tripInfo.getFeel())) textViewWeather.setVisibility(View.GONE);
+        if (StringUtil.isEmpty(tripInfo.getWeather())) textViewWeather.setVisibility(View.GONE);
         else textViewWeather.setText(getString(R.string.label_weather) + tripInfo.getWeather());
 
 
