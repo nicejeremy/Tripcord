@@ -57,6 +57,24 @@
             android:layout_marginBottom="5dp"/>
 
         <TextView
+            android:id="@+id/textView_trip_detail_feeling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/textView_trip_detail_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/textView_trip_detail_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
             android:id="@+id/textView_trip_detail_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

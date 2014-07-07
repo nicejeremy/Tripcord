@@ -39,6 +39,7 @@ import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.FacebookUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
+import com.jeremy.tripcord.common.utils.StringUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.gallery.ImageGalleryActivity;
 import com.jeremy.tripcord.record.model.RecordModel;
@@ -182,6 +183,20 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         textViewFrom.setText("From : " + tripInfo.getFrom());
         TextView textViewTo = (TextView) findViewById(R.id.textView_trip_detail_to);
         textViewTo.setText("To : " + tripInfo.getTo());
+
+        TextView textViewFeeling = (TextView) findViewById(R.id.textView_trip_detail_feeling);
+        if (StringUtil.isEmpty(tripInfo.getFeel())) textViewFeeling.setVisibility(View.GONE);
+        else textViewFeeling.setText("Feeling : " + tripInfo.getFeel());
+
+        TextView textViewTransport = (TextView) findViewById(R.id.textView_trip_detail_transport);
+        if (StringUtil.isEmpty(tripInfo.getFeel())) textViewTransport.setVisibility(View.GONE);
+        else textViewTransport.setText("Transport : " + tripInfo.getTransportation());
+
+        TextView textViewWeather = (TextView) findViewById(R.id.textView_trip_detail_weather);
+        if (StringUtil.isEmpty(tripInfo.getFeel())) textViewWeather.setVisibility(View.GONE);
+        else textViewWeather.setText("Weather : " + tripInfo.getWeather());
+
+
         TextView textViewTime = (TextView) findViewById(R.id.textView_trip_detail_time);
         textViewTime.setText("Time : " + TimeUtil.getTimeDescription(tripInfo.getDuringTime()));
         TextView textViewDistance = (TextView) findViewById(R.id.textView_trip_detail_distance);
