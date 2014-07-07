@@ -180,29 +180,29 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         TextView textViewTitle = (TextView) findViewById(R.id.textView_trip_detail_title);
         textViewTitle.setText(tripInfo.getTitle());
         TextView textViewFrom = (TextView) findViewById(R.id.textView_trip_detail_from);
-        textViewFrom.setText("From : " + tripInfo.getFrom());
+        textViewFrom.setText(getString(R.string.label_from) + tripInfo.getFrom());
         TextView textViewTo = (TextView) findViewById(R.id.textView_trip_detail_to);
-        textViewTo.setText("To : " + tripInfo.getTo());
+        textViewTo.setText(getString(R.string.label_to) + tripInfo.getTo());
 
         TextView textViewFeeling = (TextView) findViewById(R.id.textView_trip_detail_feeling);
         if (StringUtil.isEmpty(tripInfo.getFeel())) textViewFeeling.setVisibility(View.GONE);
-        else textViewFeeling.setText("Feeling : " + tripInfo.getFeel());
+        else textViewFeeling.setText(getString(R.string.label_feeling) + tripInfo.getFeel());
 
         TextView textViewTransport = (TextView) findViewById(R.id.textView_trip_detail_transport);
         if (StringUtil.isEmpty(tripInfo.getFeel())) textViewTransport.setVisibility(View.GONE);
-        else textViewTransport.setText("Transport : " + tripInfo.getTransportation());
+        else textViewTransport.setText(getString(R.string.label_transport) + tripInfo.getTransportation());
 
         TextView textViewWeather = (TextView) findViewById(R.id.textView_trip_detail_weather);
         if (StringUtil.isEmpty(tripInfo.getFeel())) textViewWeather.setVisibility(View.GONE);
-        else textViewWeather.setText("Weather : " + tripInfo.getWeather());
+        else textViewWeather.setText(getString(R.string.label_weather) + tripInfo.getWeather());
 
 
         TextView textViewTime = (TextView) findViewById(R.id.textView_trip_detail_time);
-        textViewTime.setText("Time : " + TimeUtil.getTimeDescription(tripInfo.getDuringTime()));
+        textViewTime.setText(getString(R.string.label_time) + TimeUtil.getTimeDescription(tripInfo.getDuringTime()));
         TextView textViewDistance = (TextView) findViewById(R.id.textView_trip_detail_distance);
-        textViewDistance.setText("Distance : " + DistanceUtil.getDistance(tripInfo.getDistance()));
+        textViewDistance.setText(getString(R.string.label_distance) + DistanceUtil.getDistance(tripInfo.getDistance()));
         TextView textViewPhoto = (TextView) findViewById(R.id.textView_trip_detail_photo);
-        textViewPhoto.setText("Photo : " + String.valueOf(tripInfo.getPhotoInfoList().size()));
+        textViewPhoto.setText(getString(R.string.label_photo) + String.valueOf(tripInfo.getPhotoInfoList().size()));
 
         if (tripInfo.getPhotoInfoList().size() != 0) {
             addPhoto(googleMap, tripInfo.getPhotoInfoList());

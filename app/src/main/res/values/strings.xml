@@ -79,5 +79,13 @@
     <string name="weather_cloudy">Cloudy</string>
     <string name="weather_rainy">Rainy</string>
     <string name="weather_snow">Snow</string>
+    <string name="label_from">From : </string>
+    <string name="label_to">To : </string>
+    <string name="label_feeling">Feeling : </string>
+    <string name="label_transport">Transport : </string>
+    <string name="label_weather">Weather : </string>
+    <string name="label_time">Time : </string>
+    <string name="label_distance">Distance : </string>
+    <string name="label_photo">Photo : </string>
 
 </resources>
