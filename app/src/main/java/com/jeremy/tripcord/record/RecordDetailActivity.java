@@ -8,17 +8,16 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.facebook.UiLifecycleHelper;
-import com.facebook.android.Facebook;
 import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -31,18 +30,19 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.maps.android.ui.IconGenerator;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.LocationInfo;
 import com.jeremy.tripcord.common.database.domain.PhotoInfo;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.DistanceUtil;
-import com.jeremy.tripcord.common.utils.FacebookUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.common.utils.StringUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.gallery.ImageGalleryActivity;
 import com.jeremy.tripcord.record.model.RecordModel;
+import com.jeremy.tripcord.record.switetodismiss.SwipeDismissTouchListener;
 
 import java.util.List;
 
@@ -55,6 +55,8 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     private TripInfo tripInfo;
 
     private UiLifecycleHelper uiHelper;
+
+    private boolean isShownInfo = true;
 
     /*
      * Activity Life Cycle
@@ -163,11 +165,33 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     /*
      * Custom methods
      */
-    private void initViews(TripInfo tripInfo) {
+    private void initViews(final TripInfo tripInfo) {
 
         GoogleMap googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_trip_record_detail)).getMap();
         googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(false);
+        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+
+                LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_trip_detail_info);
+                LinearLayout linearLayoutPhoto = (LinearLayout) findViewById(R.id.layout_trip_detail_photo);
+
+                if (isShownInfo) {
+                    linearLayout.setVisibility(View.INVISIBLE);
+                    if (tripInfo.getPhotoInfoList().size() > 0) {
+                        linearLayoutPhoto.setVisibility(View.INVISIBLE);
+                    }
+                } else {
+                    linearLayout.setVisibility(View.VISIBLE);
+                    if (tripInfo.getPhotoInfoList().size() > 0) {
+                        linearLayoutPhoto.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                isShownInfo = !isShownInfo;
+            }
+        });
 
         polylineOptions = new PolylineOptions();
         polylineOptions.color(getResources().getColor(R.color.color_line));
@@ -175,6 +199,10 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         for (LocationInfo locationInfo : tripInfo.getLocationInfoList()) {
             LatLng latLng = new LatLng(locationInfo.getLatitude(), locationInfo.getLongitude());
             drawLine(googleMap, latLng);
+        }
+
+        if (tripInfo.getLocationInfoList().size() != 0) {
+            addStartAndEndPoint(googleMap, tripInfo.getLocationInfoList());
         }
 
         TextView textViewTitle = (TextView) findViewById(R.id.textView_trip_detail_title);
@@ -189,8 +217,10 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         else textViewFeeling.setText(getString(R.string.label_feeling) + tripInfo.getFeel());
 
         TextView textViewTransport = (TextView) findViewById(R.id.textView_trip_detail_transport);
-        if (StringUtil.isEmpty(tripInfo.getTransportation())) textViewTransport.setVisibility(View.GONE);
-        else textViewTransport.setText(getString(R.string.label_transport) + tripInfo.getTransportation());
+        if (StringUtil.isEmpty(tripInfo.getTransportation()))
+            textViewTransport.setVisibility(View.GONE);
+        else
+            textViewTransport.setText(getString(R.string.label_transport) + tripInfo.getTransportation());
 
         TextView textViewWeather = (TextView) findViewById(R.id.textView_trip_detail_weather);
         if (StringUtil.isEmpty(tripInfo.getWeather())) textViewWeather.setVisibility(View.GONE);
@@ -204,26 +234,42 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         TextView textViewPhoto = (TextView) findViewById(R.id.textView_trip_detail_photo);
         textViewPhoto.setText(getString(R.string.label_photo) + String.valueOf(tripInfo.getPhotoInfoList().size()));
 
-        if (tripInfo.getPhotoInfoList().size() != 0) {
-            addPhoto(googleMap, tripInfo.getPhotoInfoList());
-        } else {
-            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout_trip_detail_pictures);
-            linearLayout.setVisibility(View.GONE);
-        }
-
         if (tripInfo.getLocationInfoList() != null && tripInfo.getLocationInfoList().size() > 0) {
             LocationInfo firstLocationInfo = tripInfo.getLocationInfoList().get(0);
             LatLng latLng = new LatLng(firstLocationInfo.getLatitude(), firstLocationInfo.getLongitude());
             moveFocus(googleMap, latLng, DEFAULT_ZOOM_LEVEL);
         }
+
+
+        // Set up normal ViewGroup example
+        if (tripInfo.getPhotoInfoList().size() > 0) {
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout_trip_detail_photo);
+            linearLayout.setVisibility(View.VISIBLE);
+
+            final ViewGroup dismissableContainer = (ViewGroup) findViewById(R.id.dismissable_container);
+            addPhoto(googleMap, dismissableContainer, tripInfo.getPhotoInfoList());
+        }
+
     }
 
-    private void addPhoto(GoogleMap googleMap, List<PhotoInfo> photoInfoList) {
+    private void addStartAndEndPoint(GoogleMap googleMap, List<LocationInfo> locationInfoList) {
 
-        for(int i = 0; i < photoInfoList.size(); i++) {
+        LocationInfo startPoint = locationInfoList.get(0);
+        LocationInfo endPoint = locationInfoList.get(locationInfoList.size() - 1);
+
+        LatLng latLngStart = new LatLng(startPoint.getLatitude(), startPoint.getLongitude());
+        LatLng latLngEnd = new LatLng(endPoint.getLatitude(), endPoint.getLongitude());
+
+        addTextMarker(googleMap, latLngStart, getString(R.string.start));
+        addTextMarker(googleMap, latLngEnd, getString(R.string.end));
+    }
+
+    private void addPhoto(GoogleMap googleMap, ViewGroup viewGroup, List<PhotoInfo> photoInfoList) {
+
+        for (int i = 0; i < photoInfoList.size(); i++) {
             PhotoInfo photoInfo = photoInfoList.get(i);
-            addPhotoView(i, photoInfo.getPath());
-            addMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
+            addPhotoView(viewGroup, i, photoInfo.getPath());
+            addImageMarker(googleMap, new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude()), photoInfo.getPath());
         }
 
     }
@@ -238,15 +284,33 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         polyline = googleMap.addPolyline(polylineOptions);
     }
 
-    private void addMarker(GoogleMap googleMap, LatLng latLng, String path) {
+    private void addImageMarker(GoogleMap googleMap, LatLng latLng, String path) {
 
+        IconGenerator iconGenerator = new IconGenerator(this);
+        iconGenerator.setStyle(IconGenerator.STYLE_BLUE);
+        RelativeLayout relativeLayout = (RelativeLayout) getLayoutInflater().inflate(R.layout.view_photo_marker, null);
+        ImageView imageView = (ImageView) relativeLayout.findViewById(R.id.imageView_photo_marker);
         Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(path, 50, 50);
+        imageView.setImageBitmap(bm);
+        iconGenerator.setContentView(relativeLayout);
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(bm));
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(iconGenerator.makeIcon()));
 
         googleMap.addMarker(markerOptions);
+    }
+
+    private void addTextMarker(GoogleMap googleMap, LatLng latLng, String value) {
+
+        IconGenerator iconGenerator = new IconGenerator(this);
+        iconGenerator.setStyle(IconGenerator.STYLE_ORANGE);
+
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(iconGenerator.makeIcon(value)));
+
+        googleMap.addMarker(markerOptions).showInfoWindow();
     }
 
     private void moveFocus(GoogleMap googleMap, LatLng latLng, int zoomLevel) {
@@ -256,38 +320,60 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
-    private void addPhotoView(int index, String imagePath) {
+    private void addPhotoView(final ViewGroup dismissableContainer, int index, String imagePath) {
 
-        Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(imagePath, 100, 100);
+        int width = ImageUtil.pxToDp(getApplicationContext(), 70);
+        int height = ImageUtil.pxToDp(getApplicationContext(), 70);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout_trip_detail_pictures);
-        linearLayout.setGravity(Gravity.CENTER);
-
-        ImageView imageView = new ImageView(getApplicationContext());
-        imageView.setLayoutParams(new ViewGroup.LayoutParams(100, 100));
+        Bitmap bm = ImageUtil.decodeSampledBitmapFromUri(imagePath, width, height);
+        final ImageView imageView = new ImageView(getApplicationContext());
+        imageView.setLayoutParams(new ViewGroup.LayoutParams(width, height));
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageBitmap(bm);
+        imageView.setBackgroundResource(R.drawable.shape_border_radius);
         imageView.setTag(index);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                int viewIndex = Integer.valueOf((Integer) v.getTag());
-
-                Intent intent = new Intent(RecordDetailActivity.this, ImageGalleryActivity.class);
-                intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripInfo.getTripSeq());
-                intent.putExtra(CommonContants.EXTRA_KEY_SELECTED_PICTURE_INDEX, viewIndex);
-                intent.putExtra(CommonContants.EXTRA_KEY_TRIP_TITLE, tripInfo.getTitle());
-                startActivity(intent);
+            public void onClick(View view) {
+                PhotoInfo photoInfo = tripInfo.getPhotoInfoList().get(Integer.valueOf((Integer) view.getTag()));
+                GoogleMap googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_trip_record_detail)).getMap();
+                LatLng latLng = new LatLng(photoInfo.getLatitude(), photoInfo.getLongitude());
+                moveFocus(googleMap, latLng, 17);
             }
         });
+        // Create a generic swipe-to-dismiss touch listener.
+        imageView.setOnTouchListener(new SwipeDismissTouchListener(imageView, null, new SwipeDismissTouchListener.DismissCallbacks() {
+            @Override
+            public boolean canDismiss(Object token) {
+                return true;
+            }
+
+            @Override
+            public void onDismiss(View view, Object token) {
+
+                Log.d("Whycall", "onDismiss >> " + view.getX() + " / " + dismissableContainer.getWidth());
+
+                if (view.getX() >= dismissableContainer.getWidth()) {
+                    dismissableContainer.removeView(imageView);
+                } else {
+                    int viewIndex = Integer.valueOf((Integer) view.getTag());
+
+                    Intent intent = new Intent(RecordDetailActivity.this, ImageGalleryActivity.class);
+                    intent.putExtra(CommonContants.EXTRA_KEY_TRIPSEQ, tripInfo.getTripSeq());
+                    intent.putExtra(CommonContants.EXTRA_KEY_SELECTED_PICTURE_INDEX, viewIndex);
+                    intent.putExtra(CommonContants.EXTRA_KEY_TRIP_TITLE, tripInfo.getTitle());
+                    startActivity(intent);
+                }
+            }
+        }));
 
         View view = new View(getApplicationContext());
         view.setLayoutParams(new ViewGroup.LayoutParams(10, 10));
+        view.setLayoutParams(new ViewGroup.LayoutParams(10, 10));
 
-        linearLayout.addView(imageView);
-        linearLayout.addView(view);
+        dismissableContainer.addView(imageView);
+        dismissableContainer.addView(view);
     }
 
     private void popupDropAlertDialog() {

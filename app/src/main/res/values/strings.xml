@@ -29,6 +29,7 @@
     <string name="stop">Stop</string>
     <string name="pause">Pause</string>
     <string name="start">Start</string>
+    <string name="end">End</string>
     <string name="take_picture">Take a picture</string>
     <string name="back_key_pressed_during_recording">Hey~ Guy!\nTravel path is being recorded\nDo you wanna cancel this record??</string>
     <string name="yes">Yes</string>

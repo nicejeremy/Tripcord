@@ -42,8 +42,8 @@ public class ImageRadioButton extends LinearLayout {
 
     public void addButton(int resource, int backgroundResource, int width, int height, String value) {
 
-        int widthToDp = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, width, getResources().getDisplayMetrics());
-        int heightToDp = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, height, getResources().getDisplayMetrics());
+        int widthToDp = ImageUtil.pxToDp(getContext(), width);
+        int heightToDp = ImageUtil.pxToDp(getContext(), height);
 
         ImageButton imageButton = new ImageButton(getContext());
         imageButton.setLayoutParams(new ViewGroup.LayoutParams(widthToDp, heightToDp));

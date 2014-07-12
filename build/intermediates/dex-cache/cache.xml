@@ -8,6 +8,12 @@
         revision="19.1.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
     <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-8f00fe6b7dc67dfb0e1ce5ce1169dfad2c4d85f7.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.1/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0840d832d8a8c4fde01e623f2817332801e6bb49"/>
+    <item
         dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/simple.facebook-2.1-8f307e609b884be480e0218a8cc9a9f102a63f87.jar"
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/app/libs/simple.facebook-2.1.jar"
         jumboMode="false"

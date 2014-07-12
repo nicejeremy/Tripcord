@@ -9,29 +9,59 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView_trip_detail_picture"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:background="#00000000"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" >
+    <!--<HorizontalScrollView-->
+        <!--android:id="@+id/horizontalScrollView_trip_detail_picture"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="#00000000"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp" >-->
 
-        <LinearLayout
-            android:id="@+id/linearLayout_trip_detail_pictures"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
+        <!--<LinearLayout-->
+            <!--android:id="@+id/linearLayout_trip_detail_pictures"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal" >-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-    </HorizontalScrollView>
+    <!--</HorizontalScrollView>-->
 
     <LinearLayout
+        android:id="@+id/layout_trip_detail_photo"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#99111111"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="60dp"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:id="@+id/dismissable_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_trip_detail_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/horizontalScrollView_trip_detail_picture"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">

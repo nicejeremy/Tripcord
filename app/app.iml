@@ -67,6 +67,7 @@
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="simple.facebook-2.1" level="project" />
     <orderEntry type="library" exported="" name="bolts" level="project" />
+    <orderEntry type="library" exported="" name="android-maps-utils-0.3.1" level="project" />
     <orderEntry type="module" module-name="facebook" exported="" />
   </component>
 </module>

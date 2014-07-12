@@ -3,6 +3,7 @@ package com.jeremy.tripcord.common.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.TypedValue;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -64,6 +65,13 @@ public class ImageUtil {
 
         Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length) ;
         return bitmap ;
+    }
+
+    public static int pxToDp(Context context, int px) {
+
+        int pxToDp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, px, context.getResources().getDisplayMetrics());
+
+        return pxToDp;
     }
 
 }
