@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.jeremy.tripcord.common.database.DatabaseManager;
 import com.jeremy.tripcord.common.manager.exceptions.NoRecordingException;
+import com.jeremy.tripcord.common.manager.listener.PhotoTakenListener;
 import com.jeremy.tripcord.common.utils.GPSUtil;
 
 /**
@@ -13,7 +14,31 @@ import com.jeremy.tripcord.common.utils.GPSUtil;
  */
 public class PhotoManager {
 
-    public static int insertPhotoInfo(Context context, String imagePath) {
+    private static PhotoManager instance = null;
+    private PhotoTakenListener photoTakenListener;
+
+    private PhotoManager() {
+
+    }
+
+    public static PhotoManager getInstance() {
+
+        if (instance == null) {
+            instance = new PhotoManager();
+        }
+
+        return instance;
+    }
+
+    public PhotoTakenListener getPhotoTakenListener() {
+        return photoTakenListener;
+    }
+
+    public void setPhotoTakenListener(PhotoTakenListener photoTakenListener) {
+        this.photoTakenListener = photoTakenListener;
+    }
+
+    public int insertPhotoInfo(Context context, String imagePath) {
 
 
         Location location = GPSUtil.exif2Loc(imagePath);
@@ -36,6 +61,12 @@ public class PhotoManager {
         Log.d("Tripcord", "PhotoManager >> insertPhotoInfo :: Photo has been inserted :: tripSeq [" + tripSeq + "], photoSeq [" + generatedPhotoSeq + "]");
 
         return generatedPhotoSeq;
+    }
+
+    public void notify(String imagePath) {
+        if (getPhotoTakenListener() != null) {
+            getPhotoTakenListener().photoIsTaken(imagePath);
+        }
     }
 
 }

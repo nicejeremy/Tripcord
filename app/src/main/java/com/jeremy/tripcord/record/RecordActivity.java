@@ -46,6 +46,7 @@ import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.manager.DistanceManager;
 import com.jeremy.tripcord.common.manager.PhotoManager;
 import com.jeremy.tripcord.common.manager.TimeManager;
+import com.jeremy.tripcord.common.manager.listener.PhotoTakenListener;
 import com.jeremy.tripcord.common.utils.DistanceUtil;
 import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
@@ -263,7 +264,7 @@ public class RecordActivity extends ActionBarActivity
                     Log.d("Tripcord", "RecordActivity >> onActivityResult :: data [" + imageDestination.getAbsolutePath() + "]");
 
                     // Photo info insert
-                    PhotoManager.insertPhotoInfo(RecordActivity.this, imageDestination.getAbsolutePath());
+                    PhotoManager.getInstance().insertPhotoInfo(RecordActivity.this, imageDestination.getAbsolutePath());
                     addPhotoView(imageDestination.getAbsolutePath());
 
                     break;
@@ -308,6 +309,8 @@ public class RecordActivity extends ActionBarActivity
         TimerThread timerThread = new TimerThread(handlerTime);
         Log.d("Tripcord", "RecordActivity >> triavel info generate success [" + tripSeq + "]");
         timerThread.start();
+
+        PhotoManager.getInstance().setPhotoTakenListener(photoTakenListener);
     }
 
     private void initViews() {
@@ -537,6 +540,13 @@ public class RecordActivity extends ActionBarActivity
             relativeLayout.removeView(countDownView);
 
             isRecording = true;
+        }
+    };
+
+    PhotoTakenListener photoTakenListener = new PhotoTakenListener() {
+        @Override
+        public void photoIsTaken(String path) {
+            addPhotoView(path);
         }
     };
 }

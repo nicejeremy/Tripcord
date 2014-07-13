@@ -39,8 +39,8 @@ public class CameraEventReceiver extends BroadcastReceiver {
             // 1-2-2 추출한 값과 함께 Photo Database 에 데이터 입력
             // 1-2-3 RecordActivity 에 알림
 
-            PhotoManager.insertPhotoInfo(context, imagePath);
-
+            PhotoManager.getInstance().insertPhotoInfo(context, imagePath);
+            PhotoManager.getInstance().notify(imagePath);
         } else {
 
             // Ignore
