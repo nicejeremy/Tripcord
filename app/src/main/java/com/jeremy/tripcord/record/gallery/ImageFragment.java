@@ -15,6 +15,8 @@ import com.jeremy.tripcord.common.utils.ImageUtil;
 
 import java.util.Date;
 
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class ImageFragment extends Fragment {
 
     private static final String KEY_ITEM_PATH = "path";
@@ -72,6 +74,9 @@ public class ImageFragment extends Fragment {
         final ImageView imageView = (ImageView) rootView.findViewById(R.id.imageView_image_item);
         Bitmap bitmap = ImageUtil.decodeSampledBitmapFromUri(photoInfo.getPath(), imageView.getLayoutParams().width, imageView.getLayoutParams().height);
         imageView.setImageBitmap(bitmap);
+
+        PhotoViewAttacher photoViewAttacher = new PhotoViewAttacher(imageView);
+        photoViewAttacher.update();
 
         return rootView;
     }

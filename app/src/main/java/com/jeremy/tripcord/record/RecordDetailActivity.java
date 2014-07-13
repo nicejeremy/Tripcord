@@ -47,6 +47,7 @@ import com.jeremy.tripcord.record.model.RecordDetailModel;
 import com.jeremy.tripcord.record.model.RecordModel;
 import com.jeremy.tripcord.record.switetodismiss.SwipeDismissTouchListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecordDetailActivity extends ActionBarActivity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
@@ -60,6 +61,7 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
     private UiLifecycleHelper uiHelper;
 
     private boolean isShownInfo = true;
+    private List<PhotoInfo> photoInfosForDelete;
 
     /*
      * Activity Life Cycle
@@ -76,8 +78,8 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         uiHelper.onCreate(savedInstanceState);
 
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-//        tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
         RecordDetailModel.loadTripInfo(getApplicationContext(), createTripDetailHandler(), tripSeq, 0);
+        photoInfosForDelete = new ArrayList<PhotoInfo>();
     }
 
     @Override
@@ -356,9 +358,14 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
 
                 Log.d("Whycall", "onDismiss >> " + view.getX() + " / " + dismissableContainer.getWidth());
 
-                if (view.getX() >= dismissableContainer.getWidth()) {
+                if (view.getX() >= dismissableContainer.getWidth() / 2) {
+                    // Delete Logic
                     dismissableContainer.removeView(imageView);
+                    int viewIndex = Integer.valueOf((Integer) view.getTag());
+                    PhotoInfo photoInfoForDelete = tripInfo.getPhotoInfoList().get(viewIndex);
+                    photoInfosForDelete.add(photoInfoForDelete);
                 } else {
+                    // Gellary Logic
                     int viewIndex = Integer.valueOf((Integer) view.getTag());
 
                     Intent intent = new Intent(RecordDetailActivity.this, ImageGalleryActivity.class);

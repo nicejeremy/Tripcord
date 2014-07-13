@@ -21,6 +21,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:4.+'
     compile 'com.google.maps.android:android-maps-utils:0.3+'
     compile 'net.danlew:android.joda:2.3.3'
+    compile project(':PhotoView')
     compile project(':facebook')
     compile files('libs/simple.facebook-2.1.jar')
 }

@@ -44,6 +44,12 @@
         revision="19.1.0"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
     <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-40ddf862f3b3726cb7fe35f0f0f7cc61c199e8bf.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/PhotoView/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e7b320126808065d3069791de2921e039c33a7ce"/>
+    <item
         dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-d53049431cc2b571c12224b0512721546a26a23f.jar"
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/classes.jar"
         jumboMode="false"

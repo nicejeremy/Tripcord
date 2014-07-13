@@ -68,6 +68,7 @@
     <orderEntry type="library" exported="" name="simple.facebook-2.1" level="project" />
     <orderEntry type="library" exported="" name="bolts" level="project" />
     <orderEntry type="library" exported="" name="android-maps-utils-0.3.1" level="project" />
+    <orderEntry type="module" module-name="PhotoView" exported="" />
     <orderEntry type="module" module-name="facebook" exported="" />
   </component>
 </module>
