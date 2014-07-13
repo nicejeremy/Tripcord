@@ -32,11 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1057fec-6347-46dd-a5ff-aee46484d092" name="Default" comment="#3&#10;Modify journey list UI&#10; &#10;#1&#10;Add journey summary UI&#10;Add actionbar button&#10;Add drop journey function&#10;Modify journey result date present format&#10;&#10;#4&#10;Add current location UI&#10;Modify journey result date present format">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/listener/PhotoTakenListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/receiver/CameraEventReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/receiver/CameraEventReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/PhotoManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/PhotoManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordDetailModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="52d3892c-1985-4372-8eeb-afbe53603b1d" name="Rejected commit: Default" comment="#3&#10;Modify journey list UI&#10; &#10;#1&#10;Add journey summary UI&#10;Add actionbar button&#10;Add drop journey function&#10;Modify journey result date present format&#10;&#10;#4&#10;Add current location UI&#10;Modify journey result date present format" />
@@ -118,61 +118,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecordDetailActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RecordDetailActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="6345">
-              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+            <state vertical-scroll-proportion="5.723757" vertical-offset="3117" max-vertical-offset="6645">
+              <caret line="417" column="27" selection-start-line="417" selection-start-column="27" selection-end-line="417" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5539#6456#0" expanded="true" />
-                <element signature="e#6445#6446#0" expanded="true" />
-                <element signature="e#7216#7246#0" expanded="true" />
-                <element signature="e#7382#7410#0" expanded="true" />
-                <element signature="e#7659#7692#0" expanded="true" />
-                <element signature="e#7985#8020#0" expanded="true" />
-                <element signature="e#8284#8317#0" expanded="true" />
-                <element signature="e#8464#8494#0" expanded="true" />
-                <element signature="e#8683#8717#0" expanded="true" />
-                <element signature="e#8892#8923#0" expanded="true" />
-                <element signature="e#10273#10298#0" expanded="true" />
-                <element signature="e#10345#10368#0" expanded="true" />
-                <element signature="e#13414#13922#0" expanded="true" />
-                <element signature="e#13911#13912#0" expanded="true" />
-                <element signature="e#15612#15624#0" expanded="true" />
-                <element signature="e#15626#15952#0" expanded="true" />
-                <element signature="e#15941#15942#0" expanded="true" />
-                <element signature="e#15993#16004#0" expanded="true" />
-                <element signature="e#16006#16195#0" expanded="true" />
-                <element signature="e#16184#16185#0" expanded="true" />
-                <element signature="e#16229#16258#0" expanded="true" />
-                <element signature="e#16480#16492#0" expanded="true" />
-                <element signature="e#16494#16682#0" expanded="true" />
-                <element signature="e#16671#16672#0" expanded="true" />
-                <element signature="e#16723#16734#0" expanded="true" />
-                <element signature="e#16736#16925#0" expanded="true" />
-                <element signature="e#16914#16915#0" expanded="true" />
-                <element signature="e#16959#16997#0" expanded="true" />
+                <element signature="e#5728#6645#0" expanded="true" />
+                <element signature="e#6634#6635#0" expanded="true" />
+                <element signature="e#7405#7435#0" expanded="true" />
+                <element signature="e#7571#7599#0" expanded="true" />
+                <element signature="e#7848#7881#0" expanded="true" />
+                <element signature="e#8174#8209#0" expanded="true" />
+                <element signature="e#8473#8506#0" expanded="true" />
+                <element signature="e#8653#8683#0" expanded="true" />
+                <element signature="e#8872#8906#0" expanded="true" />
+                <element signature="e#9081#9112#0" expanded="true" />
+                <element signature="e#10462#10487#0" expanded="true" />
+                <element signature="e#10534#10557#0" expanded="true" />
+                <element signature="e#13603#14111#0" expanded="true" />
+                <element signature="e#14100#14101#0" expanded="true" />
+                <element signature="e#15801#15813#0" expanded="true" />
+                <element signature="e#15815#16141#0" expanded="true" />
+                <element signature="e#16130#16131#0" expanded="true" />
+                <element signature="e#16182#16193#0" expanded="true" />
+                <element signature="e#16195#16384#0" expanded="true" />
+                <element signature="e#16373#16374#0" expanded="true" />
+                <element signature="e#16418#16447#0" expanded="true" />
+                <element signature="e#16669#16681#0" expanded="true" />
+                <element signature="e#16683#16871#0" expanded="true" />
+                <element signature="e#16860#16861#0" expanded="true" />
+                <element signature="e#16912#16923#0" expanded="true" />
+                <element signature="e#16925#17114#0" expanded="true" />
+                <element signature="e#17103#17104#0" expanded="true" />
+                <element signature="e#17148#17186#0" expanded="true" />
+                <element signature="e#17287#17753#0" expanded="true" />
+                <element signature="e#17742#17743#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecordModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java">
+      <file leaf-file-name="ImageGalleryActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/gallery/ImageGalleryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1500">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="1965">
+              <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/utils/ImageUtil.java">
+      <file leaf-file-name="RecordDetailModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordDetailModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1140">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="303" max-vertical-offset="885">
+              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonContants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TripInfoModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/model/TripInfoModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="780">
+              <caret line="57" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -201,56 +225,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2251308" vertical-offset="0" max-vertical-offset="1410">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
               <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/TimeManager.java">
+      <file leaf-file-name="RecordResultActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1260">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhotoTakenListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/listener/PhotoTakenListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_record_detail.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3536584" vertical-offset="625" max-vertical-offset="1995">
-              <caret line="60" column="48" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.769231" vertical-offset="6291" max-vertical-offset="6825">
-              <caret line="548" column="0" selection-start-line="548" selection-start-column="0" selection-end-line="548" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
+              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
               <folding>
-                <element signature="e#19947#19948#0" expanded="true" />
+                <element signature="e#2207#2219#0" expanded="true" />
+                <element signature="e#2667#2678#0" expanded="true" />
+                <element signature="e#2903#2945#0" expanded="true" />
+                <element signature="e#4344#4372#0" expanded="true" />
+                <element signature="e#4511#4541#0" expanded="true" />
+                <element signature="e#4679#4708#0" expanded="true" />
+                <element signature="e#4849#4881#0" expanded="true" />
+                <element signature="e#5019#5048#0" expanded="true" />
+                <element signature="e#5313#5347#0" expanded="true" />
+                <element signature="e#5491#5524#0" expanded="true" />
+                <element signature="e#5668#5701#0" expanded="true" />
+                <element signature="e#5847#5882#0" expanded="true" />
+                <element signature="e#6029#6065#0" expanded="true" />
+                <element signature="e#6323#6356#0" expanded="true" />
+                <element signature="e#6510#6555#0" expanded="true" />
+                <element signature="e#6698#6732#0" expanded="true" />
+                <element signature="e#6874#6907#0" expanded="true" />
+                <element signature="e#7048#7080#0" expanded="true" />
+                <element signature="e#8474#8512#0" expanded="true" />
+                <element signature="e#8611#8646#0" expanded="true" />
+                <element signature="e#8775#9250#0" expanded="true" />
+                <element signature="e#9239#9240#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1910,7 +1922,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/view_count_down.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/DistanceManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_radius.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/TripInfoFragment.java" />
@@ -1934,8 +1945,6 @@
         <option value="$PROJECT_DIR$/library/src/main/java/ru/truba/touchgallery/TouchView/UrlTouchImageView.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/ru/truba/touchgallery/GalleryWidget/InfinityUrlAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_image_gallery.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/ImageGalleryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/TripcordApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/SettingFragment.java" />
@@ -1943,7 +1952,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/sample_image_radio_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/view_image_radio_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record_result.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/utils/StringUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
@@ -1954,13 +1962,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/imagebutton/ImageRadioButton.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/switetodismiss/SwipeDismissTouchListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/listener/PhotoTakenListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/TimeManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/manager/PhotoManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/receiver/CameraEventReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordDetailModel.java" />
       </list>
     </option>
   </component>
@@ -2316,7 +2328,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="switetodismiss" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2400,195 +2412,11 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jeremy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jeremy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="receiver" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jeremy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jeremy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tripcord" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listener" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2623,7 +2451,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Android&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/AndroidManifest.xml&#10;&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml&#10;valu&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/res/values-es/values.xml&#10;color&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Common&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java&#10;Android&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/AndroidManifest.xml&#10;&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml&#10;valu&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/res/values-es/values.xml&#10;color&#9;FILE&#9;file:///Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2863,7 +2691,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="961" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2872,21 +2700,21 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3060046" sideWeight="0.59880954" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3060046" sideWeight="0.4011905" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3060046" sideWeight="0.59880954" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.295612" sideWeight="0.22916667" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.295612" sideWeight="0.7708333" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.295612" sideWeight="0.7708333" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23511904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23511904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32678983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2916,25 +2744,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.185185" vertical-offset="607" max-vertical-offset="2250">
-          <caret line="57" column="45" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="45" />
-          <folding>
-            <element signature="e#988#1003#0" expanded="false" />
-            <element signature="e#1367#1381#0" expanded="false" />
-            <element signature="e#5143#5165#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/thread/GetAddressTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
@@ -2946,13 +2759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1470">
           <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/model/TripInfoModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3021,20 +2827,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="885">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="300">
-          <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/gallery/ImageGalleryActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="2295">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -3236,14 +3028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1673" max-vertical-offset="2250">
-          <caret line="149" column="86" selection-start-line="149" selection-start-column="86" selection-end-line="149" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_border_radius_photo_marker.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
@@ -3267,52 +3051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3536584" vertical-offset="625" max-vertical-offset="1995">
           <caret line="60" column="48" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="6345">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5539#6456#0" expanded="true" />
-            <element signature="e#6445#6446#0" expanded="true" />
-            <element signature="e#7216#7246#0" expanded="true" />
-            <element signature="e#7382#7410#0" expanded="true" />
-            <element signature="e#7659#7692#0" expanded="true" />
-            <element signature="e#7985#8020#0" expanded="true" />
-            <element signature="e#8284#8317#0" expanded="true" />
-            <element signature="e#8464#8494#0" expanded="true" />
-            <element signature="e#8683#8717#0" expanded="true" />
-            <element signature="e#8892#8923#0" expanded="true" />
-            <element signature="e#10273#10298#0" expanded="true" />
-            <element signature="e#10345#10368#0" expanded="true" />
-            <element signature="e#13414#13922#0" expanded="true" />
-            <element signature="e#13911#13912#0" expanded="true" />
-            <element signature="e#15612#15624#0" expanded="true" />
-            <element signature="e#15626#15952#0" expanded="true" />
-            <element signature="e#15941#15942#0" expanded="true" />
-            <element signature="e#15993#16004#0" expanded="true" />
-            <element signature="e#16006#16195#0" expanded="true" />
-            <element signature="e#16184#16185#0" expanded="true" />
-            <element signature="e#16229#16258#0" expanded="true" />
-            <element signature="e#16480#16492#0" expanded="true" />
-            <element signature="e#16494#16682#0" expanded="true" />
-            <element signature="e#16671#16672#0" expanded="true" />
-            <element signature="e#16723#16734#0" expanded="true" />
-            <element signature="e#16736#16925#0" expanded="true" />
-            <element signature="e#16914#16915#0" expanded="true" />
-            <element signature="e#16959#16997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1500">
-          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -3372,9 +3110,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2251308" vertical-offset="0" max-vertical-offset="1410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/gallery/ImageGalleryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="1965">
+          <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/main/model/TripInfoModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="780">
+          <caret line="57" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/common/contants/CommonContants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53887886" vertical-offset="797" max-vertical-offset="1350">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordResultActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2400">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding>
+            <element signature="e#2207#2219#0" expanded="true" />
+            <element signature="e#2667#2678#0" expanded="true" />
+            <element signature="e#2903#2945#0" expanded="true" />
+            <element signature="e#4344#4372#0" expanded="true" />
+            <element signature="e#4511#4541#0" expanded="true" />
+            <element signature="e#4679#4708#0" expanded="true" />
+            <element signature="e#4849#4881#0" expanded="true" />
+            <element signature="e#5019#5048#0" expanded="true" />
+            <element signature="e#5313#5347#0" expanded="true" />
+            <element signature="e#5491#5524#0" expanded="true" />
+            <element signature="e#5668#5701#0" expanded="true" />
+            <element signature="e#5847#5882#0" expanded="true" />
+            <element signature="e#6029#6065#0" expanded="true" />
+            <element signature="e#6323#6356#0" expanded="true" />
+            <element signature="e#6510#6555#0" expanded="true" />
+            <element signature="e#6698#6732#0" expanded="true" />
+            <element signature="e#6874#6907#0" expanded="true" />
+            <element signature="e#7048#7080#0" expanded="true" />
+            <element signature="e#8474#8512#0" expanded="true" />
+            <element signature="e#8611#8646#0" expanded="true" />
+            <element signature="e#8775#9250#0" expanded="true" />
+            <element signature="e#9239#9240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/model/RecordDetailModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="303" max-vertical-offset="885">
+          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeremy/tripcord/record/RecordDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.723757" vertical-offset="3117" max-vertical-offset="6645">
+          <caret line="417" column="27" selection-start-line="417" selection-start-column="27" selection-end-line="417" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5728#6645#0" expanded="true" />
+            <element signature="e#6634#6635#0" expanded="true" />
+            <element signature="e#7405#7435#0" expanded="true" />
+            <element signature="e#7571#7599#0" expanded="true" />
+            <element signature="e#7848#7881#0" expanded="true" />
+            <element signature="e#8174#8209#0" expanded="true" />
+            <element signature="e#8473#8506#0" expanded="true" />
+            <element signature="e#8653#8683#0" expanded="true" />
+            <element signature="e#8872#8906#0" expanded="true" />
+            <element signature="e#9081#9112#0" expanded="true" />
+            <element signature="e#10462#10487#0" expanded="true" />
+            <element signature="e#10534#10557#0" expanded="true" />
+            <element signature="e#13603#14111#0" expanded="true" />
+            <element signature="e#14100#14101#0" expanded="true" />
+            <element signature="e#15801#15813#0" expanded="true" />
+            <element signature="e#15815#16141#0" expanded="true" />
+            <element signature="e#16130#16131#0" expanded="true" />
+            <element signature="e#16182#16193#0" expanded="true" />
+            <element signature="e#16195#16384#0" expanded="true" />
+            <element signature="e#16373#16374#0" expanded="true" />
+            <element signature="e#16418#16447#0" expanded="true" />
+            <element signature="e#16669#16681#0" expanded="true" />
+            <element signature="e#16683#16871#0" expanded="true" />
+            <element signature="e#16860#16861#0" expanded="true" />
+            <element signature="e#16912#16923#0" expanded="true" />
+            <element signature="e#16925#17114#0" expanded="true" />
+            <element signature="e#17103#17104#0" expanded="true" />
+            <element signature="e#17148#17186#0" expanded="true" />
+            <element signature="e#17287#17753#0" expanded="true" />
+            <element signature="e#17742#17743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

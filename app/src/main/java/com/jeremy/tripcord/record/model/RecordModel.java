@@ -76,17 +76,7 @@ public class RecordModel {
         return result;
     }
 
-    public static TripInfo loadTripInfo(Context context, int tripSeq, int limit) {
 
-        DatabaseManager databaseManager = new DatabaseManager(context);
-        databaseManager.open();
-
-        TripInfo tripInfo = databaseManager.selectTripInfo(tripSeq);
-        tripInfo.setPhotoInfoList(databaseManager.selectTripPhotos(tripSeq, limit));
-        tripInfo.setLocationInfoList(databaseManager.selectTripLocations(tripSeq));
-
-        return tripInfo;
-    }
 
     public static List<PhotoInfo> loadTripPictureInfo(Context context, int tripSeq) {
 

@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -41,6 +43,7 @@ import com.jeremy.tripcord.common.utils.ImageUtil;
 import com.jeremy.tripcord.common.utils.StringUtil;
 import com.jeremy.tripcord.common.utils.TimeUtil;
 import com.jeremy.tripcord.record.gallery.ImageGalleryActivity;
+import com.jeremy.tripcord.record.model.RecordDetailModel;
 import com.jeremy.tripcord.record.model.RecordModel;
 import com.jeremy.tripcord.record.switetodismiss.SwipeDismissTouchListener;
 
@@ -73,9 +76,8 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         uiHelper.onCreate(savedInstanceState);
 
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-        tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
-
-        initViews(tripInfo);
+//        tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
+        RecordDetailModel.loadTripInfo(getApplicationContext(), createTripDetailHandler(), tripSeq, 0);
     }
 
     @Override
@@ -414,6 +416,24 @@ public class RecordDetailActivity extends ActionBarActivity implements GooglePla
         });
         alertDialog.setMessage(R.string.post_on_facebook_your_journey);
         alertDialog.show();
+    }
+
+    private Handler createTripDetailHandler() {
+        return new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+
+                switch (msg.what) {
+                    case CommonContants.WHAT_LOAD_TRIP_DETAIL :
+                        tripInfo = (TripInfo) msg.obj;
+                        initViews(tripInfo);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
     }
 
 }

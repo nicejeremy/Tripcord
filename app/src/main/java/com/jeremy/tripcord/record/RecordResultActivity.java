@@ -3,6 +3,8 @@ package com.jeremy.tripcord.record;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -16,6 +18,7 @@ import com.jeremy.tripcord.common.contants.CommonContants;
 import com.jeremy.tripcord.common.database.domain.TripInfo;
 import com.jeremy.tripcord.common.utils.StringUtil;
 import com.jeremy.tripcord.record.imagebutton.ImageRadioButton;
+import com.jeremy.tripcord.record.model.RecordDetailModel;
 import com.jeremy.tripcord.record.model.RecordModel;
 
 import java.util.List;
@@ -33,8 +36,7 @@ public class RecordResultActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
 
-        TripInfo tripInfo = loadTripInfo();
-        initViews(tripInfo);
+        loadTripInfo();
     }
 
     @Override
@@ -84,11 +86,10 @@ public class RecordResultActivity extends ActionBarActivity {
         alertDialog.show();
     }
 
-    private TripInfo loadTripInfo() {
+    private void loadTripInfo() {
 
         int tripSeq = getIntent().getIntExtra(CommonContants.EXTRA_KEY_TRIPSEQ, -1);
-        TripInfo tripInfo = RecordModel.loadTripInfo(getApplicationContext(), tripSeq, 0);
-        return tripInfo;
+        RecordDetailModel.loadTripInfo(getApplicationContext(), createTripDetailHandler(), tripSeq, 0);
     }
 
 
@@ -158,5 +159,23 @@ public class RecordResultActivity extends ActionBarActivity {
         }
 
         finish();
+    }
+
+    private Handler createTripDetailHandler() {
+        return new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+
+                switch (msg.what) {
+                    case CommonContants.WHAT_LOAD_TRIP_DETAIL :
+                        TripInfo tripInfo = (TripInfo) msg.obj;
+                        initViews(tripInfo);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
     }
 }
