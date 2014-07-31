@@ -20,17 +20,23 @@
         revision="19.1.0"
         sha1="9a197f31cff950884d322ee0bd6bf3b15a221e32"/>
     <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/bolts-818535ad716cdac7cc3f3bef0c744e420ae2e6cc.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/libs/bolts.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef"/>
+    <item
         dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-26201e6ecfa958ed1fbd65c9d48d1fba362d8a96.jar"
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="3dfdf1db5ce5ea2999a5dcde8c8e650b02660059"/>
     <item
-        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/bolts-818535ad716cdac7cc3f3bef0c744e420ae2e6cc.jar"
-        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/libs/bolts.jar"
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-2a8fd29cfa7d54306cfe42a8d37f6108519a616d.jar"
+        jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.sothree.slidinguppanel/library/2.0.1/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef"/>
+        sha1="7049d768a49b1aad020d9aecdd037f1d9436e11f"/>
     <item
         dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-929f4aaa8ce07b4dfe9465c1909d14d5aec3a66a.jar"
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/classes.jar"
@@ -48,12 +54,18 @@
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/PhotoView/unspecified/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="e7b320126808065d3069791de2921e039c33a7ce"/>
+        sha1="ee09d01cdb301eb840a7a7e53c86f2cf21eb5b79"/>
+    <item
+        dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/library-2.4.0-520b1f82132289770df0924ad2d914d6001ee6bb.jar"
+        jar="/Users/asura1983/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb"/>
     <item
         dex="/Users/asura1983/AndroidStudioProjects/Tripcord/app/build/intermediates/pre-dexed/debug/classes-d53049431cc2b571c12224b0512721546a26a23f.jar"
         jar="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="2d984c8d5b99bfaf6349cac8b5381a13ddaa3754"/>
+        sha1="7451846662e68018ad761a14663901a795604bd6"/>
 
 </pre-dex-items>

@@ -20,6 +20,7 @@ dependencies {
     compile 'com.android.support:support-v4:19.+'
     compile 'com.google.android.gms:play-services:4.+'
     compile 'com.google.maps.android:android-maps-utils:0.3+'
+    compile 'com.sothree.slidinguppanel:library:+'
     compile 'net.danlew:android.joda:2.3.3'
     compile project(':PhotoView')
     compile project(':facebook')

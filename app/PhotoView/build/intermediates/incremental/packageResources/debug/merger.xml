@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/PhotoView/src/main/res" />
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/PhotoView/build/generated/res/rs/debug" />
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/PhotoView/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/app/PhotoView/src/debug/res" />
+    </dataSet>
+
+</merger>

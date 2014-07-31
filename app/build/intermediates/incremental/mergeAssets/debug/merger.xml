@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merger version="2" >
 
+    <dataSet config="unspecified" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/PhotoView/unspecified/assets" />
+    </dataSet>
     <dataSet config="2.3.3" >
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/assets" />
     </dataSet>
     <dataSet config="4.4.52" >
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/assets" />
+    </dataSet>
+    <dataSet config="0.3.1" >
+        <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.3.1/assets" />
     </dataSet>
     <dataSet config="19.1.0" >
         <source path="/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/assets" />

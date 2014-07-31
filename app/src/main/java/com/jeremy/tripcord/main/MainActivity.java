@@ -12,8 +12,7 @@ import android.view.MenuItem;
 import com.jeremy.tripcord.app.R;
 import com.jeremy.tripcord.intro.IntroActivity;
 
-public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -55,7 +54,7 @@ public class MainActivity extends ActionBarActivity
         switch (position) {
             case 0:
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, TripInfoFragment.newInstance())
+                        .replace(R.id.container, TripcordFragment.newInstance())
                         .commit();
                 break;
             case 1:

@@ -10,4 +10,8 @@
     <color name="color_stop">#FF2800</color>
     <color name="color_marker_border">#FF9900</color>
 
+
+    <color name="top_item">#a6c</color>
+    <color name="bottom_item">#f44</color>
+    <color name="bottom_item_alt">#c00</color>
 </resources>

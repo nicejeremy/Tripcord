@@ -81,6 +81,8 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
+    <color name="bottom_item">#f44</color>
+    <color name="bottom_item_alt">#c00</color>
     <color name="color_line">#2566AF</color>
     <color name="color_marker_border">#FF9900</color>
     <color name="color_pause">#FF5800</color>
@@ -110,6 +112,10 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="top_item">#a6c</color>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.4.52/res/values/wallet_colors.xml -->
     <eat-comment />
 
@@ -508,6 +514,28 @@
         <!-- The input type to set on the query text field. -->
         <attr name="android:inputType" />
     </declare-styleable>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.sothree.slidinguppanel/library/2.0.1/res/values/values.xml -->
+    <eat-comment />
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="panelHeight" format="dimension" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="paralaxOffset" format="dimension" />
+        <attr name="fadeColor" format="color" />
+        <attr name="flingVelocity" format="integer" />
+        <attr name="dragView" format="reference" />
+        <attr name="overlay" format="boolean" />
+        <attr name="anchorPoint" format="float" />
+        <attr name="initialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+    </declare-styleable>
+    <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <eat-comment />
+
     <declare-styleable name="Spinner">
 
         <!-- The prompt to display when the spinner's dialog is shown. -->
@@ -755,7 +783,10 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="map_height">100dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="paralax_offset">200dp</dimen>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/Tripcord/facebook/unspecified/res/values/values.xml -->
     <eat-comment />
 
@@ -934,7 +965,7 @@
     <string name="common_google_play_services_enable_button" msgid="2523291102206661146">Enable Google Play services</string>
     <string name="common_google_play_services_enable_text" msgid="227660514972886228">This app won\'t work unless you enable Google Play services.</string>
     <string name="common_google_play_services_enable_title" msgid="5122002158466380389">Enable Google Play services</string>
-    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by  <ns1:g id="app_name">%1$s</ns1:g></string>
     <string name="common_google_play_services_install_button" msgid="7153882981874058840">Get Google Play services</string>
     <string name="common_google_play_services_install_text_phone" msgid="2122112764540849864">This app won\'t run without Google Play services, which are missing from your phone.</string>
     <string name="common_google_play_services_install_text_tablet" msgid="7351599665250191022">This app won\'t run without Google Play services, which are missing from your tablet.</string>
@@ -1000,8 +1031,8 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="preposition_for_date">on <ns1:g id="date" example="May 29">%s</ns1:g></string>
-    <string name="preposition_for_time">at <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
+    <string name="preposition_for_date">on  <ns1:g id="date" example="May 29">%s</ns1:g></string>
+    <string name="preposition_for_time">at  <ns1:g id="time" example="2:33 am">%s</ns1:g></string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -1009,7 +1040,7 @@
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/build/intermediates/exploded-aar/net.danlew/android.joda/2.3.3/res/values/values.xml -->
     <eat-comment />
 
-    <string name="relative_time">"<ns1:g id="date" example="4 hours ago">%1$s</ns1:g>, <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
+    <string name="relative_time">" <ns1:g id="date" example="4 hours ago">%1$s</ns1:g>,  <ns1:g id="time" example="11:00 am">%2$s</ns1:g>"</string>
     <!-- From: file:/Users/asura1983/AndroidStudioProjects/Tripcord/app/src/main/res/values/strings.xml -->
     <eat-comment />
 

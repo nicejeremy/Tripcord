@@ -146,9 +146,20 @@ public class RecordResultActivity extends ActionBarActivity {
         ImageRadioButton imageRadioButtonTransport = (ImageRadioButton) findViewById(R.id.imageRadioButton_transport);
         ImageRadioButton imageRadioButtonWeather = (ImageRadioButton) findViewById(R.id.imageRadioButton_weather);
 
-        String feel= StringUtil.convertStringArrayToString(imageRadioButtonFeeling.getSelectedItemValues(), ",");
-        String transportation = StringUtil.convertStringArrayToString(imageRadioButtonTransport.getSelectedItemValues(), ",");
-        String weather = StringUtil.convertStringArrayToString(imageRadioButtonWeather.getSelectedItemValues(), ",");
+        String feel = "";
+        if (imageRadioButtonFeeling.getSelectedItemValues() != null) {
+            feel = StringUtil.convertStringArrayToString(imageRadioButtonFeeling.getSelectedItemValues(), ",");
+        }
+
+        String transportation = "";
+        if (imageRadioButtonTransport.getSelectedItemValues() != null) {
+            StringUtil.convertStringArrayToString(imageRadioButtonTransport.getSelectedItemValues(), ",");
+        }
+
+        String weather = "";
+        if (imageRadioButtonWeather.getSelectedItemValues() != null) {
+            StringUtil.convertStringArrayToString(imageRadioButtonWeather.getSelectedItemValues(), ",");
+        }
 
         int result = RecordModel.updateTripDetailInfo(getApplicationContext(), tripSeq, title, description, feel, transportation, weather);
 
